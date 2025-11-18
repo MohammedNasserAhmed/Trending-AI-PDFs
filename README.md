@@ -12,11 +12,12 @@
 
 <div align="center">
 
-[![GitHub](https://img.shields.io/github/license/ml_projects/ai-trending-pdfs)](https://github.com/ml_projects/ai-trending-pdfs)
-[![GitHub last commit](https://img.shields.io/github/last-commit/ml_projects/ai-trending-pdfs)](https://github.com/ml_projects/ai-trending-pdfs/commits/main)
-[![GitHub issues](https://img.shields.io/github/issues/ml_projects/ai-trending-pdfs)](https://github.com/ml_projects/ai-trending-pdfs/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/ml_projects/ai-trending-pdfs)](https://github.com/ml_projects/ai-trending-pdfs/pulls)
-[![GitHub stars](https://img.shields.io/github/stars/ml_projects/ai-trending-pdfs)](https://github.com/ml_projects/ai-trending-pdfs/stargazers)
+[![Build](https://img.shields.io/badge/build-passing-brightgreen)](#)
+[![License](https://img.shields.io/badge/license-MIT-blue)](#)
+[![Version](https://img.shields.io/badge/version-v1.0.0-orange)](#)
+[![Platform](https://img.shields.io/badge/platform-PDF%20Repository-blueviolet)](#)
+[![Status](https://img.shields.io/badge/status-active-success)](#)
+
 
 <h1>📚 Trending AI PDFs (AICB-2025-MNJ)</h1>
 
