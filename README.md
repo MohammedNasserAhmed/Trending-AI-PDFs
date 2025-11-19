@@ -1,3 +1,4 @@
+```markdown
 <!-- 
 ┌────────────────────────────────────────────────────────────────────────┐
 │  ████████╗██████╗░██╗░██████╗░███████╗  ██████╗░░█████╗░██████╗░███████╗  │
@@ -258,6 +259,7 @@ Individual books and documents retain their original licenses. We recommend chec
 | Forecasting: Principles and Practice | A practical introduction to forecasting methods. | [Download PDF](./Time_Series_Predictive_Analytics/Forecasting_Principles_and_Practice/book_file.pdf) | ![First Page Image](./Time_Series_Predictive_Analytics/Forecasting_Principles_and_Practice/first_page_image.png) |
 | Designing Data-Intensive Applications | The big ideas behind reliable, scalable, and maintainable systems. | [Download PDF](./MLOps_and_Production_AI/Designing_Data_Intensive_Applications/book_file.pdf) | ![First Page Image](./MLOps_and_Production_AI/Designing_Data_Intensive_Applications/first_page_image.png) |
 | Building Machine Learning Powered Applications | A guide to building and deploying machine learning applications. | [Download PDF](./MLOps_and_Production_AI/Building_Machine_Learning_Powered_Applications/book_file.pdf) | ![First Page Image](./MLOps_and_Production_AI/Building_Machine_Learning_Powered_Applications/first_page_image.png) |
+| Elicit - Comparative Analysis of IDS Datasets - Report | This report presents a comparative analysis of various Intrusion Detection System (IDS) datasets, focusing on their features, strengths, and limitations for effective AI-based threat detection. | [Download PDF](https://drive.google.com/file/d/1Ft1siQE2b8mMYXC6QgqG3ZijxeL6Y-tU/view?usp=drivesdk) | ![First Page Image](https://drive.google.com/file/d/1Zj9jX9s-PeYUo5G3zkGXjd8jGTp4DsoL/view?usp=drivesdk) |
 
 ---
 
@@ -322,3 +324,4 @@ Start your AI learning journey today by browsing our comprehensive catalog above
 │                 PDF KNOWLEDGE BASE FOR AI EXPERTS              │
 └─────────────────────────────────────────────────────────────────┘
 </pre>
+```
