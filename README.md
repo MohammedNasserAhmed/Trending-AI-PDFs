@@ -78,7 +78,7 @@ ls -la
 
 ---
 
-## 🚀 Usage
+## 🚀 Usage ::
 
 1. Browse our categorized book catalog below
 2. Click on any "[Download PDF]" link to access the full document
