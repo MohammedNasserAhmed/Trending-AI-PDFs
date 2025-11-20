@@ -259,7 +259,7 @@ Please open an issue on GitHub or submit a pull request with your suggestions.
 ## 🎉 Quick Demo
 
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGptam52b2VjdTV0ODFqc2EycTR4OGlwdDBxZHF4OXJtNHdpcG9zeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2K4aQX8n6Rsmzu/giphy.gif" width="400" />
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmhwZ2l2Y29wNjhuYjFnbTBlNTMwMXBkeWEyenZydTV5c2ZjbXVxcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dnk1F6WO9s3AaTmF4z/giphy.gif" width="400" />
 </p>
 
 ---
