@@ -245,8 +245,8 @@ Individual books and documents retain their original licenses. We recommend chec
 
 | Name | PDF Bio | Download Link | First Page Image |
 | :--- | :--- | :--- | :--- |
-| Introduction to Deep Learning | An introductory guide to the foundational concepts of deep learning. | [Download PDF](./Foundational_ML_Deep_Learning/Intro_to_Deep_Learning/book_file.pdf) | ![First Page Image](./Foundational_ML_Deep_Learning/Intro_to_Deep_Learning/first_page_image.png) |
-| Hands-On Machine Learning | A practical guide to machine learning with Scikit-Learn, Keras & TensorFlow. | [Download PDF](./Foundational_ML_Deep_Learning/Hands_On_Machine_Learning/book_file.pdf) | ![First Page Image](./Foundational_ML_Deep_Learning/Hands_On_Machine_Learning/first_page_image.png) |
+| Introduction Deep Learning | An introductory guide to the foundational concepts of deep learning. | [Download PDF](./Foundational_ML_Deep_Learning/Intro_to_Deep_Learning/book_file.pdf) | ![First Page Image](./Foundational_ML_Deep_Learning/Intro_to_Deep_Learning/first_page_image.png) |
+| Hands-On Machine Learning | A practical guide to machine learning with Scikit-Learn | [Download PDF](Keras & TensorFlow.) | ![First Page Image](./Foundational_ML_Deep_Learning/Hands_On_Machine_Learning/book_file.pdf) |
 | Speech and Language Processing | A comprehensive introduction to natural language processing. | [Download PDF](./Natural_Language_Processing_NLP/Speech_and_Language_Processing/book_file.pdf) | ![First Page Image](./Natural_Language_Processing_NLP/Speech_and_Language_Processing/first_page_image.png) |
 | Transformers for NLP | A deep dive into the transformer architecture and its applications in NLP. | [Download PDF](./Natural_Language_Processing_NLP/Transformers_for_NLP/book_file.pdf) | ![First Page Image](./Natural_Language_Processing_NLP/Transformers_for_NLP/first_page_image.png) |
 | Computer Vision: A Modern Approach | A modern introduction to the field of computer vision. | [Download PDF](./Computer_Vision_Generative_AI/Computer_Vision_A_Modern_Approach/book_file.pdf) | ![First Page Image](./Computer_Vision_Generative_AI/Computer_Vision_A_Modern_Approach/first_page_image.png) |
@@ -257,10 +257,13 @@ Individual books and documents retain their original licenses. We recommend chec
 | The Ethical Algorithm | A guide to creating and using socially responsible algorithms. | [Download PDF](./AI_Ethics_and_Policy/The_Ethical_Algorithm/book_file.pdf) | ![First Page Image](./AI_Ethics_and_Policy/The_Ethical_Algorithm/first_page_image.png) |
 | Time Series Analysis: Forecasting and Control | A comprehensive guide to time series analysis. | [Download PDF](./Time_Series_Predictive_Analytics/Time_Series_Analysis_Forecasting_and_Control/book_file.pdf) | ![First Page Image](./Time_Series_Predictive_Analytics/Time_Series_Analysis_Forecasting_and_Control/first_page_image.png) |
 | Forecasting: Principles and Practice | A practical introduction to forecasting methods. | [Download PDF](./Time_Series_Predictive_Analytics/Forecasting_Principles_and_Practice/book_file.pdf) | ![First Page Image](./Time_Series_Predictive_Analytics/Forecasting_Principles_and_Practice/first_page_image.png) |
-| Designing Data-Intensive Applications | The big ideas behind reliable, scalable, and maintainable systems. | [Download PDF](./MLOps_and_Production_AI/Designing_Data_Intensive_Applications/book_file.pdf) | ![First Page Image](./MLOps_and_Production_AI/Designing_Data_Intensive_Applications/first_page_image.png) |
+| Designing Data-Intensive Applications | The big ideas behind reliable | [Download PDF](scalable) | ![First Page Image](and maintainable systems.) |
 | Building Machine Learning Powered Applications | A guide to building and deploying machine learning applications. | [Download PDF](./MLOps_and_Production_AI/Building_Machine_Learning_Powered_Applications/book_file.pdf) | ![First Page Image](./MLOps_and_Production_AI/Building_Machine_Learning_Powered_Applications/first_page_image.png) |
+<<<<<<< HEAD
+=======
 | Elicit - Comparative Analysis of IDS Datasets - Report | This report presents a comparative analysis of various Intrusion Detection System (IDS) datasets, focusing on their features, strengths, and limitations for effective AI-based threat detection. | [Download PDF](https://drive.google.com/file/d/1Ft1siQE2b8mMYXC6QgqG3ZijxeL6Y-tU/view?usp=drivesdk) | ![First Page Image](https://drive.google.com/file/d/1Zj9jX9s-PeYUo5G3zkGXjd8jGTp4DsoL/view?usp=drivesdk) |
 
+>>>>>>> 8a5973c776f55f3a5e1ede8d8c6a43fb65d06d8f
 ---
 
 ## ❓ FAQ
