@@ -32,7 +32,7 @@
     .grid{display:grid;grid-template-columns:1fr}
     @media(min-width:900px){.grid{grid-template-columns:1fr}}
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.5/dist/mermaid.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 </head>
 <body>
@@ -90,20 +90,34 @@
       {key:'mlops',label:'MLOps & Production AI'}
     ];
     const classDefs={
-      root:'fill:#0a0a0a,color:#f5f5f5,stroke:#ff7a00,stroke-width:2px',
-      dl:'fill:#121212,color:#e6e6e6,stroke:#ff7a00',
-      nlp:'fill:#121212,color:#e6e6e6,stroke:#ff7a00',
-      cv:'fill:#121212,color:#e6e6e6,stroke:#ff7a00',
-      rl:'fill:#121212,color:#e6e6e6,stroke:#ff7a00',
-      ethics:'fill:#121212,color:#e6e6e6,stroke:#ff7a00',
-      ts:'fill:#121212,color:#e6e6e6,stroke:#ff7a00',
-      mlops:'fill:#121212,color:#e6e6e6,stroke:#ff7a00'
+      root:'fill:#1f2937,color:#ffffff,stroke:#334155,stroke-width:2px',
+      dl:'fill:#6fa8dc,color:#111827,stroke:#3d75a1',
+      nlp:'fill:#ffd966,color:#111827,stroke:#c4a300',
+      cv:'fill:#93c47d,color:#111827,stroke:#5a8b49',
+      rl:'fill:#e69138,color:#111827,stroke:#b45f06',
+      ethics:'fill:#c27ba0,color:#111827,stroke:#7d3f65',
+      ts:'fill:#76a5af,color:#111827,stroke:#3b6a70',
+      mlops:'fill:#8e7cc3,color:#111827,stroke:#5b4b8a'
     };
     function renderDiagram(){
-      let g='flowchart TB\nA[Trending AI PDFs]:::root\n';
-      for(const s of sections) g+=`A --> ${s.key}[${s.label}]:::${s.key}\n`;
-      g+="classDef root "+classDefs.root+"\n";
-      for(const k in classDefs) if(k!=='root') g+=`classDef ${k} ${classDefs[k]}\n`;
+      let g='flowchart TB\n';
+      g+='    A[Trending AI PDFs]:::root\n';
+      g+='    A --> B[Foundational ML & DL]:::dl\n';
+      g+='    A --> C[NLP & Transformers]:::nlp\n';
+      g+='    A --> D[Computer Vision]:::cv\n';
+      g+='    A --> E[Reinforcement Learning]:::rl\n';
+      g+='    A --> F[AI Ethics]:::ethics\n';
+      g+='    A --> G[Time Series Analytics]:::ts\n';
+      g+='    A --> H[MLOps & Production AI]:::mlops\n';
+
+      g+=`\n    classDef root ${classDefs.root}\n`;
+      g+=`    classDef dl ${classDefs.dl}\n`;
+      g+=`    classDef nlp ${classDefs.nlp}\n`;
+      g+=`    classDef cv ${classDefs.cv}\n`;
+      g+=`    classDef rl ${classDefs.rl}\n`;
+      g+=`    classDef ethics ${classDefs.ethics}\n`;
+      g+=`    classDef ts ${classDefs.ts}\n`;
+      g+=`    classDef mlops ${classDefs.mlops}\n`;
       mermaid.initialize({startOnLoad:false,theme:'dark'});
       mermaid.render('graphDiv',g,svg=>{document.getElementById('mermaidRoot').innerHTML=svg});
     }
@@ -214,26 +228,7 @@
       }catch(e){return false}
     }
     async function tryLiveDiagram(){
-      const info=repoInfo();
-      if(!info){renderDiagram();return}
-      try{
-        const res=await fetch('https://api.github.com/repos/'+info.owner+'/'+info.repo+'/contents/PDFs');
-        const data=await res.json();
-        const dirs=(data||[]).filter(x=>x.type==='dir').map(x=>x.name);
-        const wanted=['Foundational_ML_Deep_Learning','NLP_Transformers','Computer_Vision','Reinforcement_Learning','AI_Ethics','Time_Series_Analytics','MLOps_Production_AI'];
-        const present=wanted.filter(w=>dirs.includes(w));
-        let g='flowchart TB\nA[Trending AI PDFs]:::root\n';
-        for(const name of present){
-          const id=name.replace(/[^A-Za-z0-9]/g,'');
-          const label=name.replace(/_/g,' ');
-          g+=`A --> ${id}[${label}]:::nlp\n`;
-          g+=`click ${id} "${info.base}PDFs/${name}/README.md" "Open ${label}"\n`;
-        }
-        g+="classDef root "+classDefs.root+"\n";
-        g+=`classDef nlp ${classDefs.nlp}\n`;
-        mermaid.initialize({startOnLoad:false,theme:'dark'});
-        mermaid.render('graphLive',g,svg=>{document.getElementById('mermaidRoot').innerHTML=svg});
-      }catch(e){renderDiagram()}
+      renderDiagram();
     }
     document.getElementById('searchTitle').addEventListener('input',renderRows);
     document.getElementById('filterSection').addEventListener('change',renderRows);
