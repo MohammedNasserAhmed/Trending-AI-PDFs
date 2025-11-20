@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "script"
+  },
+  "rules": {
+    "no-console": "off",
+    "prefer-const": "warn",
+    "no-unused-vars": ["warn", {"args": "none"}]
+  },
+  "overrides": [
+    {
+      "files": ["scripts/**/*.js"],
+      "env": {"node": true}
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Introduction to Deep Learning",
+    "section": "Foundational_ML_Deep_Learning",
+    "link": "./PDFs/Foundational_ML_Deep_Learning/Intro_to_Deep_Learning/book_file.pdf",
+    "image": "./PDFs/Foundational_ML_Deep_Learning/Intro_to_Deep_Learning/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Hands-On Machine Learning",
+    "section": "Foundational_ML_Deep_Learning",
+    "link": "./PDFs/Foundational_ML_Deep_Learning/Hands_On_Machine_Learning/book_file.pdf",
+    "image": "./PDFs/Foundational_ML_Deep_Learning/Hands_On_Machine_Learning/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Speech and Language Processing",
+    "section": "NLP_Transformers",
+    "link": "./PDFs/NLP_Transformers/Speech_and_Language_Processing/book_file.pdf",
+    "image": "./PDFs/NLP_Transformers/Speech_and_Language_Processing/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Transformers for NLP",
+    "section": "NLP_Transformers",
+    "link": "./PDFs/NLP_Transformers/Transformers_for_NLP/book_file.pdf",
+    "image": "./PDFs/NLP_Transformers/Transformers_for_NLP/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Computer Vision: A Modern Approach",
+    "section": "Computer_Vision",
+    "link": "./PDFs/Computer_Vision/Computer_Vision_A_Modern_Approach/book_file.pdf",
+    "image": "./PDFs/Computer_Vision/Computer_Vision_A_Modern_Approach/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Generative Deep Learning",
+    "section": "Computer_Vision",
+    "link": "./PDFs/Computer_Vision/Generative_Deep_Learning/book_file.pdf",
+    "image": "./PDFs/Computer_Vision/Generative_Deep_Learning/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Reinforcement Learning: An Introduction",
+    "section": "Reinforcement_Learning",
+    "link": "./PDFs/Reinforcement_Learning/Reinforcement_Learning_An_Introduction/book_file.pdf",
+    "image": "./PDFs/Reinforcement_Learning/Reinforcement_Learning_An_Introduction/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Probabilistic Robotics",
+    "section": "Reinforcement_Learning",
+    "link": "./PDFs/Reinforcement_Learning/Probabilistic_Robotics/book_file.pdf",
+    "image": "./PDFs/Reinforcement_Learning/Probabilistic_Robotics/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Weapons of Math Destruction",
+    "section": "AI_Ethics",
+    "link": "./PDFs/AI_Ethics/Weapons_of_Math_Destruction/book_file.pdf",
+    "image": "./PDFs/AI_Ethics/Weapons_of_Math_Destruction/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "The Ethical Algorithm",
+    "section": "AI_Ethics",
+    "link": "./PDFs/AI_Ethics/The_Ethical_Algorithm/book_file.pdf",
+    "image": "./PDFs/AI_Ethics/The_Ethical_Algorithm/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Time Series Analysis: Forecasting and Control",
+    "section": "Time_Series_Analytics",
+    "link": "./PDFs/Time_Series_Analytics/Time_Series_Analysis_Forecasting_and_Control/book_file.pdf",
+    "image": "./PDFs/Time_Series_Analytics/Time_Series_Analysis_Forecasting_and_Control/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Forecasting: Principles and Practice",
+    "section": "Time_Series_Analytics",
+    "link": "./PDFs/Time_Series_Analytics/Forecasting_Principles_and_Practice/book_file.pdf",
+    "image": "./PDFs/Time_Series_Analytics/Forecasting_Principles_and_Practice/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Designing Data-Intensive Applications",
+    "section": "MLOps_Production_AI",
+    "link": "./PDFs/MLOps_Production_AI/Designing_Data_Intensive_Applications/book_file.pdf",
+    "image": "./PDFs/MLOps_Production_AI/Designing_Data_Intensive_Applications/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Building Machine Learning Powered Applications",
+    "section": "MLOps_Production_AI",
+    "link": "./PDFs/MLOps_Production_AI/Building_Machine_Learning_Powered_Applications/book_file.pdf",
+    "image": "./PDFs/MLOps_Production_AI/Building_Machine_Learning_Powered_Applications/first_page_image.png",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  },
+  {
+    "title": "Elicit - Comparative Analysis of IDS Datasets - Report",
+    "section": "Foundational_ML_Deep_Learning",
+    "link": "https://drive.google.com/file/d/1Ft1siQE2b8mMYXC6QgqG3ZijxeL6Y-tU/view?usp=drivesdk",
+    "image": "https://drive.google.com/file/d/1Zj9jX9s-PeYUo5G3zkGXjd8jGTp4DsoL/view?usp=drivesdk",
+    "updated": "2025-11-15T12:00:00Z",
+    "authors": null,
+    "year": null,
+    "tags": []
+  }
+]

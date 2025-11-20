@@ -1,0 +1,22 @@
+{
+  "name": "trending-ai-pdfs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static catalog and utilities for Trending AI PDFs",
+  "scripts": {
+    "lint": "eslint scripts .github/workflows --ext .js,.yml,.yaml",
+    "lint:fix": "eslint scripts .github/workflows --ext .js,.yml,.yaml --fix",
+    "format": "prettier --write \"**/*.{js,json,md,yml,yaml,html}\"",
+    "format:check": "prettier --check \"**/*.{js,json,md,yml,yaml,html}\"",
+    "lint:ci": "npm run format:check && npm run lint"
+  },
+  "devDependencies": {
+    "eslint": "^9.13.0",
+    "@eslint/js": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "yaml-eslint-parser": "^1.2.3",
+    "eslint-plugin-yml": "^1.14.0"
+  }
+}

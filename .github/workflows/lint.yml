@@ -1,0 +1,22 @@
+name: Lint Code and Workflows
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dev dependencies
+        run: npm ci || npm i
+      - name: Run ESLint and Prettier checks
+        run: npm run lint:ci
+      - name: Actionlint (GitHub workflows)
+        uses: reviewdog/actionlint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

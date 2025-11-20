@@ -8,27 +8,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0b1020;--card:#121830;--text:#e5e7eb;--muted:#9ca3af;--accent:#22d3ee}
+    :root{--bg:#0a0a0a;--bg2:#121212;--card:#0d0d0d;--text:#e6e6e6;--muted:#a3a3a3;--accent:#ff7a00;--accentGlow:rgba(255,122,0,.6)}
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1020,#0e1426);color:var(--text)}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text)}
     header{padding:24px 20px;text-align:center}
     header h1{margin:0;font-size:28px;letter-spacing:.2px}
     header p{margin:6px 0 0;color:var(--muted)}
     .container{max-width:1080px;margin:0 auto;padding:0 20px 40px}
-    .card{background:var(--card);border:1px solid #1f2942;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
-    .section{padding:18px 18px 6px;border-bottom:1px solid #1b2238;display:flex;align-items:center;gap:10px}
+    .card{background:var(--card);border:1px solid #1f1f1f;border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.6)}
+    .section{padding:18px 18px 6px;border-bottom:1px solid #1a1a1a;display:flex;align-items:center;gap:10px}
     .section h2{margin:0;font-size:18px}
-    .badge{font-size:12px;background:#0ea5e9;color:white;border-radius:999px;padding:4px 10px}
+    .badge{font-size:12px;background:var(--accent);color:#1a1a1a;border-radius:999px;padding:4px 10px}
     #diagram{padding:18px}
-    #diagram .mermaid{background:#0f172a;border-radius:12px;padding:12px;overflow:auto}
+    #diagram .mermaid{background:#0b0b0b;border-radius:12px;padding:12px;overflow:auto;border:1px solid #1f1f1f}
     .pulse svg .node rect{animation:pulse 3s ease-in-out infinite}
-    @keyframes pulse{0%{filter:drop-shadow(0 0 0 rgba(34,211,238,.0))}50%{filter:drop-shadow(0 0 6px rgba(34,211,238,.55))}100%{filter:drop-shadow(0 0 0 rgba(34,211,238,.0))}}
+    @keyframes pulse{0%{filter:drop-shadow(0 0 0 var(--accentGlow))}50%{filter:drop-shadow(0 0 8px var(--accentGlow))}100%{filter:drop-shadow(0 0 0 var(--accentGlow))}}
     table{width:100%;border-collapse:collapse}
-    thead th{position:sticky;top:0;background:#0c1226;border-bottom:1px solid #1f2942;text-align:left;padding:12px;font-size:13px;color:#a7b0c3}
-    tbody td{border-bottom:1px solid #1f2942;padding:12px;font-size:14px}
-    tbody tr:hover{background:#0f162b}
-    .link{color:#22d3ee;text-decoration:none}
-    .img{width:70px;height:94px;object-fit:cover;border-radius:8px;border:1px solid #1f2942;background:#0b1020}
+    thead th{position:sticky;top:0;background:#0c0c0c;border-bottom:1px solid #262626;text-align:left;padding:12px;font-size:13px;color:#c9c9c9}
+    tbody td{border-bottom:1px solid #1f1f1f;padding:12px;font-size:14px}
+    tbody tr:hover{background:#111111}
+    .link{color:var(--accent);text-decoration:none}
+    .img{width:70px;height:94px;object-fit:cover;border-radius:8px;border:1px solid #1f1f1f;background:#000}
     .grid{display:grid;grid-template-columns:1fr}
     @media(min-width:900px){.grid{grid-template-columns:1fr}}
   </style>
@@ -90,14 +90,14 @@
       {key:'mlops',label:'MLOps & Production AI'}
     ];
     const classDefs={
-      root:'fill:#1f2937,color:#ffffff,stroke:#334155,stroke-width:2px',
-      dl:'fill:#6fa8dc,color:#111827,stroke:#3d75a1',
-      nlp:'fill:#ffd966,color:#111827,stroke:#c4a300',
-      cv:'fill:#93c47d,color:#111827,stroke:#5a8b49',
-      rl:'fill:#e69138,color:#111827,stroke:#b45f06',
-      ethics:'fill:#c27ba0,color:#111827,stroke:#7d3f65',
-      ts:'fill:#76a5af,color:#111827,stroke:#3b6a70',
-      mlops:'fill:#8e7cc3,color:#111827,stroke:#5b4b8a'
+      root:'fill:#0a0a0a,color:#f5f5f5,stroke:#ff7a00,stroke-width:2px',
+      dl:'fill:#121212,color:#e6e6e6,stroke:#ff7a00',
+      nlp:'fill:#121212,color:#e6e6e6,stroke:#ff7a00',
+      cv:'fill:#121212,color:#e6e6e6,stroke:#ff7a00',
+      rl:'fill:#121212,color:#e6e6e6,stroke:#ff7a00',
+      ethics:'fill:#121212,color:#e6e6e6,stroke:#ff7a00',
+      ts:'fill:#121212,color:#e6e6e6,stroke:#ff7a00',
+      mlops:'fill:#121212,color:#e6e6e6,stroke:#ff7a00'
     };
     function renderDiagram(){
       let g='flowchart TB\nA[Trending AI PDFs]:::root\n';
@@ -140,8 +140,10 @@
       const h=location.hostname;
       if(h.includes('github.io')){
         const parts=location.pathname.split('/').filter(Boolean);
-        if(parts.length>=2){
-          return {owner:parts[0],repo:parts[1],base:'/'+parts[0]+'/'+parts[1]+'/'};
+        const owner=h.split('.')[0];
+        const repo=parts[0]||'';
+        if(owner && repo){
+          return {owner,repo,base:'/'+repo+'/'};
         }
       }
       return null;
@@ -215,7 +217,7 @@
       const info=repoInfo();
       if(!info){renderDiagram();return}
       try{
-        const res=await fetch('https://api.github.com/repos/'+info.owner+'/'+info.repo+'/contents/');
+        const res=await fetch('https://api.github.com/repos/'+info.owner+'/'+info.repo+'/contents/PDFs');
         const data=await res.json();
         const dirs=(data||[]).filter(x=>x.type==='dir').map(x=>x.name);
         const wanted=['Foundational_ML_Deep_Learning','NLP_Transformers','Computer_Vision','Reinforcement_Learning','AI_Ethics','Time_Series_Analytics','MLOps_Production_AI'];
@@ -225,7 +227,7 @@
           const id=name.replace(/[^A-Za-z0-9]/g,'');
           const label=name.replace(/_/g,' ');
           g+=`A --> ${id}[${label}]:::nlp\n`;
-          g+=`click ${id} "${info.base}${name}/README.md" "Open ${label}"\n`;
+          g+=`click ${id} "${info.base}PDFs/${name}/README.md" "Open ${label}"\n`;
         }
         g+="classDef root "+classDefs.root+"\n";
         g+=`classDef nlp ${classDefs.nlp}\n`;
