@@ -25,7 +25,7 @@ function outPath(link){
 }
 
 (function main(){
-  const csvPath=path.join(process.cwd(),'catalog.csv');
+  const csvPath=path.join(process.cwd(),'docs','catalog.csv');
   const text=fs.readFileSync(csvPath,'utf8');
   const rows=parseCsv(text);
   for(const row of rows){

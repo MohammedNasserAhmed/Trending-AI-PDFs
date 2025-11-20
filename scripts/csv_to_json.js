@@ -15,7 +15,7 @@ function parseCsv(text){
 }
 
 (function main(){
-  const p=path.join(process.cwd(),'catalog.csv');
+  const p=path.join(process.cwd(),'docs','catalog.csv');
   const text=fs.readFileSync(p,'utf8');
   const rows=parseCsv(text);
   const enriched=rows.map(r=>({
@@ -28,6 +28,7 @@ function parseCsv(text){
     year:null,
     tags:[]
   }));
-  fs.writeFileSync(path.join(process.cwd(),'catalog.json'),JSON.stringify(enriched,null,2));
-  console.log('catalog.json generated');
+  const out=path.join(process.cwd(),'docs','catalog.json');
+  fs.writeFileSync(out,JSON.stringify(enriched,null,2));
+  console.log('docs/catalog.json generated');
 })();

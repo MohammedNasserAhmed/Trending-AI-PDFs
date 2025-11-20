@@ -30,7 +30,7 @@ function checkUrl(url){
 }
 
 (async function main(){
-  const p=path.join(process.cwd(),'catalog.csv');
+  const p=path.join(process.cwd(),'docs','catalog.csv');
   if(!fs.existsSync(p)){
     console.error('catalog.csv missing');
     process.exit(1);

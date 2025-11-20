@@ -136,7 +136,7 @@ flowchart TB
     classDef mlops fill:#8e7cc3,color:#111827,stroke:#5b4b8a
 ```
 
-- For an interactive, animated version, open `index.html` in this repository.
+- For an interactive, animated version, open `docs/index.html` in this repository.
 
 ---
 
@@ -222,8 +222,8 @@ Individual books and documents retain their original licenses. We recommend chec
 
 ## 📚 Comprehensive Book Catalog
 
-- View the live, auto-refreshed catalog at `index.html`. The table reads from `catalog.csv` on each page load.
-- To add or edit entries, update `catalog.csv` with four columns: `Title`, `Section`, `Link`, `Image`.
+- View the live, auto-refreshed catalog at `docs/index.html`. The table reads from `docs/catalog.csv` on each page load.
+ - To add or edit entries, update `docs/catalog.csv` with four columns: `Title`, `Section`, `Link`, `Image`.
 - Google Drive image links are auto-converted to embeddable thumbnails.
 ---
 
