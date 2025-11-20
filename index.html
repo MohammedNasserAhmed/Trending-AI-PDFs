@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trending AI PDFs — Catalog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--card:#121830;--text:#e5e7eb;--muted:#9ca3af;--accent:#22d3ee}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1020,#0e1426);color:var(--text)}
+    header{padding:24px 20px;text-align:center}
+    header h1{margin:0;font-size:28px;letter-spacing:.2px}
+    header p{margin:6px 0 0;color:var(--muted)}
+    .container{max-width:1080px;margin:0 auto;padding:0 20px 40px}
+    .card{background:var(--card);border:1px solid #1f2942;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+    .section{padding:18px 18px 6px;border-bottom:1px solid #1b2238;display:flex;align-items:center;gap:10px}
+    .section h2{margin:0;font-size:18px}
+    .badge{font-size:12px;background:#0ea5e9;color:white;border-radius:999px;padding:4px 10px}
+    #diagram{padding:18px}
+    #diagram .mermaid{background:#0f172a;border-radius:12px;padding:12px;overflow:auto}
+    .pulse svg .node rect{animation:pulse 3s ease-in-out infinite}
+    @keyframes pulse{0%{filter:drop-shadow(0 0 0 rgba(34,211,238,.0))}50%{filter:drop-shadow(0 0 6px rgba(34,211,238,.55))}100%{filter:drop-shadow(0 0 0 rgba(34,211,238,.0))}}
+    table{width:100%;border-collapse:collapse}
+    thead th{position:sticky;top:0;background:#0c1226;border-bottom:1px solid #1f2942;text-align:left;padding:12px;font-size:13px;color:#a7b0c3}
+    tbody td{border-bottom:1px solid #1f2942;padding:12px;font-size:14px}
+    tbody tr:hover{background:#0f162b}
+    .link{color:#22d3ee;text-decoration:none}
+    .img{width:70px;height:94px;object-fit:cover;border-radius:8px;border:1px solid #1f2942;background:#0b1020}
+    .grid{display:grid;grid-template-columns:1fr}
+    @media(min-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Trending AI PDFs</h1>
+    <p>Interactive architecture and live catalog</p>
+  </header>
+
+  <main class="container grid">
+    <section class="card" aria-label="Architecture">
+      <div class="section">
+        <h2>Architecture Diagram</h2>
+        <span class="badge">Live</span>
+      </div>
+      <div id="diagram" class="pulse">
+        <div class="mermaid" id="mermaidRoot"></div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:18px" aria-label="Catalog">
+      <div class="section">
+        <h2>Comprehensive Book Catalog</h2>
+        <span class="badge" id="lastUpdated">Updated: --</span>
+      </div>
+      <div style="padding:12px;display:flex;gap:10px;align-items:center">
+        <input id="searchTitle" type="search" placeholder="Search title" style="flex:1;padding:8px 10px;border-radius:8px;border:1px solid #1f2942;background:#0b1020;color:#e5e7eb">
+        <select id="filterSection" style="padding:8px 10px;border-radius:8px;border:1px solid #1f2942;background:#0b1020;color:#e5e7eb">
+          <option value="">All Sections</option>
+        </select>
+      </div>
+      <div style="padding:12px">
+        <table id="catalog">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Section</th>
+              <th>Link</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const sections=[
+      {key:'dl',label:'Foundational ML & DL'},
+      {key:'nlp',label:'NLP & Transformers'},
+      {key:'cv',label:'Computer Vision'},
+      {key:'rl',label:'Reinforcement Learning'},
+      {key:'ethics',label:'AI Ethics'},
+      {key:'ts',label:'Time Series Analytics'},
+      {key:'mlops',label:'MLOps & Production AI'}
+    ];
+    const classDefs={
+      root:'fill:#1f2937,color:#ffffff,stroke:#334155,stroke-width:2px',
+      dl:'fill:#6fa8dc,color:#111827,stroke:#3d75a1',
+      nlp:'fill:#ffd966,color:#111827,stroke:#c4a300',
+      cv:'fill:#93c47d,color:#111827,stroke:#5a8b49',
+      rl:'fill:#e69138,color:#111827,stroke:#b45f06',
+      ethics:'fill:#c27ba0,color:#111827,stroke:#7d3f65',
+      ts:'fill:#76a5af,color:#111827,stroke:#3b6a70',
+      mlops:'fill:#8e7cc3,color:#111827,stroke:#5b4b8a'
+    };
+    function renderDiagram(){
+      let g='flowchart TB\nA[Trending AI PDFs]:::root\n';
+      for(const s of sections) g+=`A --> ${s.key}[${s.label}]:::${s.key}\n`;
+      g+="classDef root "+classDefs.root+"\n";
+      for(const k in classDefs) if(k!=='root') g+=`classDef ${k} ${classDefs[k]}\n`;
+      mermaid.initialize({startOnLoad:false,theme:'dark'});
+      mermaid.render('graphDiv',g,svg=>{document.getElementById('mermaidRoot').innerHTML=svg});
+    }
+    function driveEmbed(url){
+      try{
+        if(!url) return '';
+        const u=new URL(url);
+        if(u.hostname.includes('drive.google.com')){
+          const m=/\/file\/d\/([^/]+)\//.exec(url);
+          if(m&&m[1]) return `https://drive.google.com/uc?export=view&id=${m[1]}`;
+          const id=u.searchParams.get('id');
+          if(id) return `https://drive.google.com/uc?export=view&id=${id}`;
+        }
+        return url;
+      }catch(e){return url}
+    }
+    let rows=[];
+    function setLastUpdated(res,parsed){
+      const h=res.headers.get('Last-Modified');
+      let d=h?new Date(h):null;
+      if(!d){
+        let best=null;
+        for(const r of parsed.data){
+          if(r.Updated){
+            const dd=new Date(r.Updated);
+            if(!isNaN(dd)) best=!best||dd>best?dd:best;
+          }
+        }
+        d=best||new Date();
+      }
+      document.getElementById('lastUpdated').textContent='Updated: '+d.toLocaleString();
+    }
+    function derivedImage(link,image){
+      const m=driveEmbed(image);
+      if(m) return m;
+      if(!link) return '';
+      const info=repoInfo();
+      if(/^https?:\/\//.test(link)){
+        if(info){
+          const p=link.split('/').slice(-1)[0].replace(/\.pdf$/i,'');
+          return `https://raw.githubusercontent.com/${info.owner}/${info.repo}/site-assets/images/${p}.png`;
+        }
+        return '';
+      }
+      const p=link.replace(/\.pdf$/i,'').replace(/^\.+\//,'');
+      const local='images/'+p+'.png';
+      if(info){
+        const remote=`https://raw.githubusercontent.com/${info.owner}/${info.repo}/site-assets/images/${p.split('/').slice(-1)[0]}.png`;
+        return remote;
+      }
+      return local;
+    }
+    function populateFilter(){
+      const sel=document.getElementById('filterSection');
+      const set=new Set(rows.map(r=>r.Section).filter(Boolean));
+      sel.innerHTML='<option value="">All Sections</option>';
+      Array.from(set).sort().forEach(s=>{
+        const o=document.createElement('option');o.value=s;o.textContent=s;sel.appendChild(o);
+      });
+    }
+    function renderRows(){
+      const q=document.getElementById('searchTitle').value.trim().toLowerCase();
+      const sec=document.getElementById('filterSection').value;
+      const tbody=document.querySelector('#catalog tbody');
+      tbody.innerHTML='';
+      for(const row of rows){
+        if(q && !(row.Title||'').toLowerCase().includes(q)) continue;
+        if(sec && row.Section!==sec) continue;
+        const tr=document.createElement('tr');
+        const linkHtml=row.Link?`<a class="link" href="${row.Link}" target="_blank" rel="noopener">Open</a>`:'';
+        const imgSrc=derivedImage(row.Link,row.Image);
+        tr.innerHTML=
+          `<td>${row.Title||''}</td>`+
+          `<td>${row.Section||''}</td>`+
+          `<td>${linkHtml}</td>`+
+          `<td>${imgSrc?`<img class="img" src="${imgSrc}" alt="cover" onerror="this.style.visibility='hidden'">`:''}</td>`;
+        tbody.appendChild(tr);
+      }
+    }
+    async function loadCSV(){
+      const res=await fetch('catalog.csv?t='+Date.now());
+      const text=await res.text();
+      const parsed=Papa.parse(text,{header:true,skipEmptyLines:true});
+      rows=parsed.data;
+      populateFilter();
+      setLastUpdated(res,parsed);
+      renderRows();
+    }
+    async function loadAssetsJson(){
+      const info=repoInfo();
+      if(!info) return false;
+      const url=`https://raw.githubusercontent.com/${info.owner}/${info.repo}/site-assets/catalog.json?t=${Date.now()}`;
+      try{
+        const res=await fetch(url);
+        if(!res.ok) return false;
+        const data=await res.json();
+        rows=data;
+        populateFilter();
+        document.getElementById('lastUpdated').textContent='Updated: '+new Date().toLocaleString();
+        renderRows();
+        return true;
+      }catch(e){return false}
+    }
+    function repoInfo(){
+      const h=location.hostname;
+      if(h.includes('github.io')){
+        const parts=location.pathname.split('/').filter(Boolean);
+        if(parts.length>=2){
+          return {owner:parts[0],repo:parts[1],base:'/'+parts[0]+'/'+parts[1]+'/'};
+        }
+      }
+      return null;
+    }
+    async function tryLiveDiagram(){
+      const info=repoInfo();
+      if(!info){renderDiagram();return}
+      try{
+        const res=await fetch('https://api.github.com/repos/'+info.owner+'/'+info.repo+'/contents/');
+        const data=await res.json();
+        const dirs=(data||[]).filter(x=>x.type==='dir').map(x=>x.name);
+        const wanted=['Foundational_ML_Deep_Learning','NLP_Transformers','Computer_Vision','Reinforcement_Learning','AI_Ethics','Time_Series_Analytics','MLOps_Production_AI'];
+        const present=wanted.filter(w=>dirs.includes(w));
+        let g='flowchart TB\nA[Trending AI PDFs]:::root\n';
+        for(const name of present){
+          const id=name.replace(/[^A-Za-z0-9]/g,'');
+          const label=name.replace(/_/g,' ');
+          g+=`A --> ${id}[${label}]:::nlp\n`;
+          g+=`click ${id} "${info.base}${name}/README.md" "Open ${label}"\n`;
+        }
+        g+="classDef root "+classDefs.root+"\n";
+        g+=`classDef nlp ${classDefs.nlp}\n`;
+        mermaid.initialize({startOnLoad:false,theme:'dark'});
+        mermaid.render('graphLive',g,svg=>{document.getElementById('mermaidRoot').innerHTML=svg});
+      }catch(e){renderDiagram()}
+    }
+    document.getElementById('searchTitle').addEventListener('input',renderRows);
+    document.getElementById('filterSection').addEventListener('change',renderRows);
+    tryLiveDiagram();
+    (async()=>{ if(!(await loadAssetsJson())) await loadCSV(); })();
+  </script>
+</body>
+</html>

@@ -103,61 +103,40 @@ ls -la
 
 ## 📂 Project Structure
 
-```
-Trending-AI-PDFs/
-├── Foundational_ML_Deep_Learning/
-│   ├── Intro_to_Deep_Learning/
-│   └── Hands_On_Machine_Learning/
-├── Natural_Language_Processing_NLP/
-│   ├── Speech_and_Language_Processing/
-│   └── Transformers_for_NLP/
-├── Computer_Vision_Generative_AI/
-│   ├── Computer_Vision_A_Modern_Approach/
-│   └── Generative_Deep_Learning/
-├── Reinforcement_Learning_Robotics/
-│   ├── Reinforcement_Learning_An_Introduction/
-│   └── Probabilistic_Robotics/
-├── AI_Ethics_and_Policy/
-│   ├── Weapons_of_Math_Destruction/
-│   └── The_Ethical_Algorithm/
-├── Time_Series_Predictive_Analytics/
-│   ├── Time_Series_Analysis_Forecasting_and_Control/
-│   └── Forecasting_Principles_and_Practice/
-└── MLOps_and_Production_AI/
-    ├── Designing_Data_Intensive_Applications/
-    └── Building_Machine_Learning_Powered_Applications/
-```
+- `Foundational_ML_Deep_Learning` — core machine learning principles, deep learning architectures, optimization, and representation learning.
+- `NLP_Transformers` — natural language processing, transformer models, tokenization, pretraining, fine-tuning, and evaluation.
+- `Computer_Vision` — image and video understanding, detection, segmentation, generative vision, and multimodal perception.
+- `Reinforcement_Learning` — sequential decision-making, policies, value functions, exploration, and model-based/model-free RL.
+- `AI_Ethics` — fairness, accountability, transparency, safety, governance, and societal impact of AI systems.
+- `Time_Series_Analytics` — temporal modeling, forecasting, seasonality, anomalies, and probabilistic time series methods.
+- `MLOps_Production_AI` — productionizing ML systems: data pipelines, deployment, monitoring, CI/CD, and reliability.
 
 ---
 
 ## 🧩 Architecture Diagram
 
-```
-                    ┌────────────────────────────┐
-                    │     TRENDING AI PDFs       │
-                    └───────────┬────────────────┘
-                                │
-         ┌──────────────────────┼──────────────────────┐
-         │                      │                      │
-    ┌────▼────┐           ┌─────▼─────┐          ┌─────▼─────┐
-    │ML & Deep│           │    NLP    │          │   Vision  │
-    │Learning │           │           │          │ & Gen AI  │
-    └────┬────┘           └─────┬─────┘          └─────┬─────┘
-         │                      │                      │
-    ┌────▼────┐           ┌─────▼─────┐          ┌─────▼─────┐
-    │   RL    │           │AI Ethics  │          │ Time Ser. │
-    │& Robotic│           │ & Policy  │          │Analytics  │
-    └────┬────┘           └─────┬─────┘          └─────┬─────┘
-         │                      │                      │
-         └──────────────────────┼──────────────────────┘
-                                │
-                         ┌──────▼──────┐
-                         │   MLOps &   │
-                         │Production AI│
-                         └─────────────┘
+```mermaid
+flowchart TB
+    A[Trending AI PDFs]:::root
+    A --> B[Foundational ML & DL]:::dl
+    A --> C[NLP & Transformers]:::nlp
+    A --> D[Computer Vision]:::cv
+    A --> E[Reinforcement Learning]:::rl
+    A --> F[AI Ethics]:::ethics
+    A --> G[Time Series Analytics]:::ts
+    A --> H[MLOps & Production AI]:::mlops
 
-    [PDF] ──► {Knowledge} ──► [You]
+    classDef root fill:#1f2937,color:#ffffff,stroke:#334155,stroke-width:2px
+    classDef dl fill:#6fa8dc,color:#111827,stroke:#3d75a1
+    classDef nlp fill:#ffd966,color:#111827,stroke:#c4a300
+    classDef cv fill:#93c47d,color:#111827,stroke:#5a8b49
+    classDef rl fill:#e69138,color:#111827,stroke:#b45f06
+    classDef ethics fill:#c27ba0,color:#111827,stroke:#7d3f65
+    classDef ts fill:#76a5af,color:#111827,stroke:#3b6a70
+    classDef mlops fill:#8e7cc3,color:#111827,stroke:#5b4b8a
 ```
+
+- For an interactive, animated version, open `index.html` in this repository.
 
 ---
 
@@ -243,23 +222,9 @@ Individual books and documents retain their original licenses. We recommend chec
 
 ## 📚 Comprehensive Book Catalog
 
-| Name | PDF Bio | Download Link | First Page Image |
-| :--- | :--- | :--- | :--- |
-| Introduction Deep Learning | An introductory guide to the foundational concepts of deep learning. | [Download PDF](./Foundational_ML_Deep_Learning/Intro_to_Deep_Learning/book_file.pdf) | ![First Page Image](./Foundational_ML_Deep_Learning/Intro_to_Deep_Learning/first_page_image.png) |
-| Hands-On Machine Learning | A practical guide to machine learning with Scikit-Learn | [Download PDF](Keras & TensorFlow.) | ![First Page Image](./Foundational_ML_Deep_Learning/Hands_On_Machine_Learning/book_file.pdf) |
-| Speech and Language Processing | A comprehensive introduction to natural language processing. | [Download PDF](./Natural_Language_Processing_NLP/Speech_and_Language_Processing/book_file.pdf) | ![First Page Image](./Natural_Language_Processing_NLP/Speech_and_Language_Processing/first_page_image.png) |
-| Transformers for NLP | A deep dive into the transformer architecture and its applications in NLP. | [Download PDF](./Natural_Language_Processing_NLP/Transformers_for_NLP/book_file.pdf) | ![First Page Image](./Natural_Language_Processing_NLP/Transformers_for_NLP/first_page_image.png) |
-| Computer Vision: A Modern Approach | A modern introduction to the field of computer vision. | [Download PDF](./Computer_Vision_Generative_AI/Computer_Vision_A_Modern_Approach/book_file.pdf) | ![First Page Image](./Computer_Vision_Generative_AI/Computer_Vision_A_Modern_Approach/first_page_image.png) |
-| Generative Deep Learning | A guide to building and understanding generative models. | [Download PDF](./Computer_Vision_Generative_AI/Generative_Deep_Learning/book_file.pdf) | ![First Page Image](./Computer_Vision_Generative_AI/Generative_Deep_Learning/first_page_image.png) |
-| Reinforcement Learning: An Introduction | A comprehensive introduction to the key ideas and algorithms of reinforcement learning. | [Download PDF](./Reinforcement_Learning_Robotics/Reinforcement_Learning_An_Introduction/book_file.pdf) | ![First Page Image](./Reinforcement_Learning_Robotics/Reinforcement_Learning_An_Introduction/first_page_image.png) |
-| Probabilistic Robotics | An introduction to the techniques used in probabilistic robotics. | [Download PDF](./Reinforcement_Learning_Robotics/Probabilistic_Robotics/book_file.pdf) | ![First Page Image](./Reinforcement_Learning_Robotics/Probabilistic_Robotics/first_page_image.png) |
-| Weapons of Math Destruction | An exploration of the societal impact of algorithms. | [Download PDF](./AI_Ethics_and_Policy/Weapons_of_Math_Destruction/book_file.pdf) | ![First Page Image](./AI_Ethics_and_Policy/Weapons_of_Math_Destruction/first_page_image.png) |
-| The Ethical Algorithm | A guide to creating and using socially responsible algorithms. | [Download PDF](./AI_Ethics_and_Policy/The_Ethical_Algorithm/book_file.pdf) | ![First Page Image](./AI_Ethics_and_Policy/The_Ethical_Algorithm/first_page_image.png) |
-| Time Series Analysis: Forecasting and Control | A comprehensive guide to time series analysis. | [Download PDF](./Time_Series_Predictive_Analytics/Time_Series_Analysis_Forecasting_and_Control/book_file.pdf) | ![First Page Image](./Time_Series_Predictive_Analytics/Time_Series_Analysis_Forecasting_and_Control/first_page_image.png) |
-| Forecasting: Principles and Practice | A practical introduction to forecasting methods. | [Download PDF](./Time_Series_Predictive_Analytics/Forecasting_Principles_and_Practice/book_file.pdf) | ![First Page Image](./Time_Series_Predictive_Analytics/Forecasting_Principles_and_Practice/first_page_image.png) |
-| Designing Data-Intensive Applications | The big ideas behind reliable | [Download PDF](scalable) | ![First Page Image](and maintainable systems.) |
-| Building Machine Learning Powered Applications | A guide to building and deploying machine learning applications. | [Download PDF](./MLOps_and_Production_AI/Building_Machine_Learning_Powered_Applications/book_file.pdf) | ![First Page Image](./MLOps_and_Production_AI/Building_Machine_Learning_Powered_Applications/first_page_image.png) |
-| Elicit - Comparative Analysis of IDS Datasets - Report | This report presents a comparative analysis of various Intrusion Detection System (IDS) datasets, focusing on their features, strengths, and limitations for effective AI-based threat detection. | [Download PDF](https://drive.google.com/file/d/1Ft1siQE2b8mMYXC6QgqG3ZijxeL6Y-tU/view?usp=drivesdk) | ![First Page Image](https://drive.google.com/file/d/1Zj9jX9s-PeYUo5G3zkGXjd8jGTp4DsoL/view?usp=drivesdk) |
+- View the live, auto-refreshed catalog at `index.html`. The table reads from `catalog.csv` on each page load.
+- To add or edit entries, update `catalog.csv` with four columns: `Title`, `Section`, `Link`, `Image`.
+- Google Drive image links are auto-converted to embeddable thumbnails.
 ---
 
 ## ❓ FAQ

@@ -1,0 +1,16 @@
+Title,Section,Link,Image,Updated
+Introduction to Deep Learning,Foundational_ML_Deep_Learning,./Foundational_ML_Deep_Learning/Intro_to_Deep_Learning/book_file.pdf,./Foundational_ML_Deep_Learning/Intro_to_Deep_Learning/first_page_image.png,2025-11-15T12:00:00Z
+Hands-On Machine Learning,Foundational_ML_Deep_Learning,./Foundational_ML_Deep_Learning/Hands_On_Machine_Learning/book_file.pdf,./Foundational_ML_Deep_Learning/Hands_On_Machine_Learning/first_page_image.png,2025-11-15T12:00:00Z
+Speech and Language Processing,NLP_Transformers,./NLP_Transformers/Speech_and_Language_Processing/book_file.pdf,./NLP_Transformers/Speech_and_Language_Processing/first_page_image.png,2025-11-15T12:00:00Z
+Transformers for NLP,NLP_Transformers,./NLP_Transformers/Transformers_for_NLP/book_file.pdf,./NLP_Transformers/Transformers_for_NLP/first_page_image.png,2025-11-15T12:00:00Z
+Computer Vision: A Modern Approach,Computer_Vision,./Computer_Vision/Computer_Vision_A_Modern_Approach/book_file.pdf,./Computer_Vision/Computer_Vision_A_Modern_Approach/first_page_image.png,2025-11-15T12:00:00Z
+Generative Deep Learning,Computer_Vision,./Computer_Vision/Generative_Deep_Learning/book_file.pdf,./Computer_Vision/Generative_Deep_Learning/first_page_image.png,2025-11-15T12:00:00Z
+Reinforcement Learning: An Introduction,Reinforcement_Learning,./Reinforcement_Learning/Reinforcement_Learning_An_Introduction/book_file.pdf,./Reinforcement_Learning/Reinforcement_Learning_An_Introduction/first_page_image.png,2025-11-15T12:00:00Z
+Probabilistic Robotics,Reinforcement_Learning,./Reinforcement_Learning/Probabilistic_Robotics/book_file.pdf,./Reinforcement_Learning/Probabilistic_Robotics/first_page_image.png,2025-11-15T12:00:00Z
+Weapons of Math Destruction,AI_Ethics,./AI_Ethics/Weapons_of_Math_Destruction/book_file.pdf,./AI_Ethics/Weapons_of_Math_Destruction/first_page_image.png,2025-11-15T12:00:00Z
+The Ethical Algorithm,AI_Ethics,./AI_Ethics/The_Ethical_Algorithm/book_file.pdf,./AI_Ethics/The_Ethical_Algorithm/first_page_image.png,2025-11-15T12:00:00Z
+Time Series Analysis: Forecasting and Control,Time_Series_Analytics,./Time_Series_Analytics/Time_Series_Analysis_Forecasting_and_Control/book_file.pdf,./Time_Series_Analytics/Time_Series_Analysis_Forecasting_and_Control/first_page_image.png,2025-11-15T12:00:00Z
+Forecasting: Principles and Practice,Time_Series_Analytics,./Time_Series_Analytics/Forecasting_Principles_and_Practice/book_file.pdf,./Time_Series_Analytics/Forecasting_Principles_and_Practice/first_page_image.png,2025-11-15T12:00:00Z
+Designing Data-Intensive Applications,MLOps_Production_AI,./MLOps_Production_AI/Designing_Data_Intensive_Applications/book_file.pdf,./MLOps_Production_AI/Designing_Data_Intensive_Applications/first_page_image.png,2025-11-15T12:00:00Z
+Building Machine Learning Powered Applications,MLOps_Production_AI,./MLOps_Production_AI/Building_Machine_Learning_Powered_Applications/book_file.pdf,./MLOps_Production_AI/Building_Machine_Learning_Powered_Applications/first_page_image.png,2025-11-15T12:00:00Z
+Elicit - Comparative Analysis of IDS Datasets - Report,Foundational_ML_Deep_Learning,https://drive.google.com/file/d/1Ft1siQE2b8mMYXC6QgqG3ZijxeL6Y-tU/view?usp=drivesdk,https://drive.google.com/file/d/1Zj9jX9s-PeYUo5G3zkGXjd8jGTp4DsoL/view?usp=drivesdk,2025-11-15T12:00:00Z

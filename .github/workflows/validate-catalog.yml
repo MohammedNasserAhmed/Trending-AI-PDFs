@@ -1,0 +1,36 @@
+name: Validate Catalog
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: |
+          mkdir -p scripts
+      - name: Validate catalog.csv
+        run: node scripts/validate_catalog.js
+      - name: Generate covers
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y poppler-utils
+          node scripts/generate_covers.js
+      - name: Upload generated covers
+        uses: actions/upload-artifact@v4
+        with:
+          name: covers
+          path: images
+      - name: Generate catalog.json
+        run: node scripts/csv_to_json.js
+      - name: Upload catalog.json
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalog-json
+          path: catalog.json
