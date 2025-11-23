@@ -86,3 +86,7 @@ test-results/
 
 # Internal project documentation (excluded from Git)
 .project-docs/
+
+# Git backup files
+*.bundle
+*.patch
