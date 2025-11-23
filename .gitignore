@@ -83,3 +83,6 @@ test-results/
 # Documentation builds
 /docs/.vitepress/cache
 /docs/.vitepress/dist
+
+# Internal project documentation (excluded from Git)
+.project-docs/
