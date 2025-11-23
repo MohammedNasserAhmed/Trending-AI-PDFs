@@ -1,22 +1,26 @@
 {
   "name": "trending-ai-pdfs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "Static catalog and utilities for Trending AI PDFs",
+  "description": "Modern AI PDFs catalog with analytics and tracking",
+  "type": "module",
   "scripts": {
-    "lint": "eslint scripts .github/workflows --ext .js,.yml,.yaml",
-    "lint:fix": "eslint scripts .github/workflows --ext .js,.yml,.yaml --fix",
-    "format": "prettier --write \"**/*.{js,json,md,yml,yaml,html}\"",
-    "format:check": "prettier --check \"**/*.{js,json,md,yml,yaml,html}\"",
-    "lint:ci": "npm run format:check && npm run lint"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server/server.js",
+    "dev:fullstack": "concurrently \"npm run dev\" \"npm run server\"",
+    "sync-catalog": "node scripts/sync-from-sheets.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "@neondatabase/serverless": "^0.9.0",
+    "dotenv": "^16.3.1",
+    "chart.js": "^4.4.0"
   },
   "devDependencies": {
-    "eslint": "^9.13.0",
-    "@eslint/js": "^9.13.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.3.3",
-    "yaml-eslint-parser": "^1.2.3",
-    "eslint-plugin-yml": "^1.14.0"
+    "vite": "^5.0.0",
+    "concurrently": "^8.2.2"
   }
 }

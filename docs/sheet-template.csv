@@ -1,0 +1,4 @@
+Title,Section,Link,Image,Updated,Authors,Year,Tags
+Introduction to Deep Learning,Foundational_ML_Deep_Learning,https://www.deeplearningbook.org/,https://images.example.com/deeplearning.png,2025-11-23,Ian Goodfellow,2016,"ML,Deep Learning,Neural Networks"
+Attention Is All You Need,NLP_Transformers,https://arxiv.org/pdf/1706.03762.pdf,https://images.example.com/transformers.png,2025-11-23,Vaswani et al.,2017,"NLP,Transformers,Attention"
+Object Detection with YOLO,Computer_Vision,https://arxiv.org/pdf/1506.02640.pdf,https://images.example.com/yolo.png,2025-11-23,Redmon et al.,2015,"Computer Vision,Object Detection"
