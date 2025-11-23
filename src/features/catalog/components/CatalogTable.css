@@ -11,7 +11,7 @@
 .catalog-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 600px;
+  min-width: 900px; /* Increased for summary column */
 }
 
 .catalog-table thead th {
@@ -47,7 +47,21 @@
 .cell-title {
   font-weight: var(--font-weight-medium);
   color: var(--color-text-primary);
+  max-width: 300px;
+}
+
+/* NEW: Summary Column */
+.cell-summary {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
   max-width: 400px;
+}
+
+.no-summary {
+  color: var(--color-text-muted);
+  font-style: italic;
+  font-size: var(--font-size-xs);
 }
 
 .cell-section {
@@ -65,7 +79,7 @@
 }
 
 .cell-link {
-  min-width: 120px;
+  min-width: 100px;
 }
 
 .download-link {
@@ -93,7 +107,7 @@
 
 .cell-image {
   text-align: center;
-  min-width: 80px;
+  min-width: 90px;
 }
 
 .pdf-preview {
@@ -101,15 +115,36 @@
   height: 94px;
   object-fit: cover;
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-border-medium);
+  border: 2px solid var(--color-border-medium);
   background: var(--color-bg-tertiary);
-  transition: transform var(--transition-base);
+  transition: all var(--transition-base);
+}
+
+/* NEW: Clickable image cursor */
+.pdf-preview.clickable {
+  cursor: zoom-in;
 }
 
 .pdf-preview:hover {
-  transform: scale(1.5);
+  transform: scale(1.15);
   box-shadow: var(--shadow-xl);
   z-index: 100;
+  border-color: var(--color-accent-primary);
+}
+
+/* NEW: Image placeholder for items without images */
+.image-placeholder {
+  width: 70px;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px dashed var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  font-size: 32px;
+  opacity: 0.5;
+  margin: 0 auto;
 }
 
 .empty-state {
@@ -137,14 +172,24 @@
 @media (max-width: 768px) {
   .catalog-table {
     font-size: var(--font-size-sm);
+    min-width: 700px;
   }
   
   .catalog-row td {
     padding: var(--space-2);
   }
   
-  .pdf-preview {
+  .pdf-preview, .image-placeholder {
     width: 50px;
     height: 67px;
+  }
+  
+  .cell-summary {
+    max-width: 250px;
+    font-size: var(--font-size-xs);
+  }
+  
+  .cell-title {
+    max-width: 200px;
   }
 }

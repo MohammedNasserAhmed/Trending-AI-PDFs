@@ -1,9 +1,10 @@
 /**
  * Catalog Table Component
- * Display PDF catalog with images and links
+ * Display PDF catalog with images, summaries, and clickable previews
  */
 
 import { trackDownload } from '../../tracking/services/trackingService.js';
+import { showImageLightbox, convertGoogleDriveUrl } from '../../../shared/components/ImageLightbox.js';
 import './CatalogTable.css';
 
 export function createCatalogTable(items = []) {
@@ -27,10 +28,11 @@ export function createCatalogTable(items = []) {
   table.innerHTML = `
     <thead>
       <tr>
+        <th>Preview</th>
         <th>Title</th>
+        <th>Summary</th>
         <th>Section</th>
         <th>Link</th>
-        <th>Preview</th>
       </tr>
     </thead>
     <tbody id="catalog-tbody">
@@ -52,10 +54,50 @@ function createTableRow(item) {
   const tr = document.createElement('tr');
   tr.className = 'catalog-row slide-in-up';
   
+  // Image cell (moved to first position)
+  const imageCell = document.createElement('td');
+  imageCell.className = 'cell-image';
+  const imgSrc = getImageUrl(item);
+  if (imgSrc) {
+    const img = document.createElement('img');
+    img.src = imgSrc;
+    img.alt = `${item.title} preview`;
+    img.className = 'pdf-preview clickable';
+    img.title = 'Click to view full size';
+    img.onerror = function() {
+      this.style.display = 'none';
+    };
+    
+    // Add click handler for lightbox
+    img.addEventListener('click', () => {
+      showImageLightbox(imgSrc, item.title);
+    });
+    
+    imageCell.appendChild(img);
+  } else {
+    // Placeholder if no image
+    const placeholder = document.createElement('div');
+    placeholder.className = 'image-placeholder';
+    placeholder.textContent = '📄';
+    imageCell.appendChild(placeholder);
+  }
+  
   // Title cell
   const titleCell = document.createElement('td');
   titleCell.className = 'cell-title';
   titleCell.textContent = item.title || 'Untitled';
+  
+  // Summary cell (NEW!)
+  const summaryCell = document.createElement('td');
+  summaryCell.className = 'cell-summary';
+  if (item.summary) {
+    summaryCell.textContent = item.summary;
+  } else {
+    const noSummary = document.createElement('span');
+    noSummary.className = 'no-summary';
+    noSummary.textContent = 'No summary available';
+    summaryCell.appendChild(noSummary);
+  }
   
   // Section cell
   const sectionCell = document.createElement('td');
@@ -72,7 +114,7 @@ function createTableRow(item) {
   if (item.link) {
     const link = document.createElement('a');
     link.href = item.link;
-    link.textContent = 'Download PDF';
+    link.textContent = 'Download'  ;
     link.className = 'download-link';
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
@@ -84,39 +126,19 @@ function createTableRow(item) {
     linkCell.textContent = 'N/A';
   }
   
-  // Image cell
-  const imageCell = document.createElement('td');
-  imageCell.className = 'cell-image';
-  const imgSrc = getImageUrl(item);
-  if (imgSrc) {
-    const img = document.createElement('img');
-    img.src = imgSrc;
-    img.alt = `${item.title} preview`;
-    img.className = 'pdf-preview';
-    img.onerror = function() {
-      this.style.display = 'none';
-    };
-    imageCell.appendChild(img);
-  }
-  
+  tr.appendChild(imageCell);
   tr.appendChild(titleCell);
+  tr.appendChild(summaryCell);
   tr.appendChild(sectionCell);
   tr.appendChild(linkCell);
-  tr.appendChild(imageCell);
   
   return tr;
 }
 
 function getImageUrl(item) {
   if (item.image) {
-    // Handle Google Drive URLs
-    if (item.image.includes('drive.google.com')) {
-      const match = item.image.match(/\/file\/d\/([^/]+)\//);
-      if (match) {
-        return `https://drive.google.com/uc?export=view&id=${match[1]}`;
-      }
-    }
-    return item.image;
+    // Convert Google Drive URLs to direct image URLs
+    return convertGoogleDriveUrl(item.image);
   }
   
   // Derive from link if available

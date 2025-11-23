@@ -12,6 +12,7 @@
  *   GOOGLE_API_KEY - Your Google API key
  */
 
+import 'dotenv/config';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -22,7 +23,7 @@ const __dirname = path.dirname(__filename);
 // Configuration
 const SHEET_ID = process.env.GOOGLE_SHEETS_ID;
 const API_KEY = process.env.GOOGLE_API_KEY;
-const SHEET_NAME = 'PDFs'; // Name of the sheet tab
+const SHEET_NAME = 'TrendingPdfsSHT'; // Name of the sheet tab
 const OUTPUT_FILE = path.join(__dirname, '../docs/catalog.json');
 
 /**
@@ -72,6 +73,11 @@ function convertToCatalog(rows) {
         switch (header) {
           case 'title':
             entry.title = value;
+            break;
+          case 'summary':
+          case 'description':
+          case 'summary/description':
+            entry.summary = value;
             break;
           case 'section':
             entry.section = value;
