@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: trending-ai-pdfs-api
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server/server.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DATABASE_URL
+        sync: false  # Set in Render dashboard
+      - key: GOOGLE_SHEETS_ID
+        sync: false  # Set in Render dashboard
+      - key: GOOGLE_API_KEY
+        sync: false  # Set in Render dashboard
+      - key: GITHUB_TOKEN
+        sync: false  # Set in Render dashboard (optional)
+      - key: GITHUB_REPO_OWNER
+        value: MohammedNasserAhmed
+      - key: GITHUB_REPO_NAME
+        value: Trending-AI-PDFs
+      - key: ALLOWED_ORIGINS
+        sync: false  # Set to your Vercel frontend URL

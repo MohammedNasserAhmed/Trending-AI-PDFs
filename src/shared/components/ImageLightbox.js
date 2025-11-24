@@ -102,7 +102,7 @@ function handleKeyPress(e) {
 /**
  * Convert Google Drive sharing link to direct image URL
  * Input: https://drive.google.com/file/d/FILE_ID/view?usp=drive_link
- * Output: https://drive.google.com/uc?export=view&id=FILE_ID
+ * Output: https://drive.google.com/thumbnail?id=FILE_ID&sz=w400
  */
 export function convertGoogleDriveUrl(url) {
   if (!url) return '';
@@ -119,7 +119,9 @@ export function convertGoogleDriveUrl(url) {
     for (const pattern of patterns) {
       const match = url.match(pattern);
       if (match && match[1]) {
-        return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+        // Use thumbnail API for better embedding support
+        // sz=w400 for medium quality, can be w100, w200, w400, w800, etc.
+        return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w400`;
       }
     }
   }
