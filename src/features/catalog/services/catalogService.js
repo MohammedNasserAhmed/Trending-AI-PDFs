@@ -2,6 +2,21 @@
  * Catalog Service
  * Fetch and manage PDF catalog data
  */
+
+/**
+ * Fetch catalog data
+ */
+export async function fetchCatalog() {
+  try {
+    // Fetch from the public folder
+    // In Vite, files in the public folder are served from root in production
+    const catalogUrl = '/catalog.json';
+    const response = await fetch(catalogUrl);
+    
+    if (!response.ok) {
+      throw new Error(`Failed to fetch catalog: ${response.status}`);
+    }
+
     const data = await response.json();
     console.log('Catalog loaded successfully:', data.length, 'items');
     return data;
@@ -30,7 +45,7 @@ export function getSections(catalogData) {
 /**
  * Filter catalog by search and section
  */
-export function filterCatalog(catalogData, searchQuery = '', selectedSection= '') {
+export function filterCatalog(catalogData, searchQuery = '', selectedSection = '') {
   let filtered = [...catalogData];
   
   // Filter by search query
