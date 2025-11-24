@@ -2,21 +2,6 @@
  * Catalog Service
  * Fetch and manage PDF catalog data
  */
-
-/**
- * Fetch catalog data
- */
-export async function fetchCatalog() {
-  try {
-    // Fetch from the public docs folder
-    // In Vite, files in the public folder are served from root
-    const catalogUrl = '/docs/catalog.json';
-    const response = await fetch(catalogUrl);
-    
-    if (!response.ok) {
-      throw new Error(`Failed to fetch catalog: ${response.status}`);
-    }
-
     const data = await response.json();
     console.log('Catalog loaded successfully:', data.length, 'items');
     return data;
