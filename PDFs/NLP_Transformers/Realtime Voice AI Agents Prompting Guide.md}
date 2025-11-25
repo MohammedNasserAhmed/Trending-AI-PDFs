@@ -1,0 +1,1 @@
+This guide provides a comprehensive framework for designing and implementing real-time voice AI agents, including best practices, technical requirements, and testing methodologies.
