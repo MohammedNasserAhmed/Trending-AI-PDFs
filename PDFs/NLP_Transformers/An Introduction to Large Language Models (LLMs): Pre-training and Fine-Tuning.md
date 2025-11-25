@@ -1,0 +1,1 @@
+This document introduces the concept of Large Language Models (LLMs), discussing pre-training and fine-tuning approaches to improve the models' ability to understand and generate human-like language.
