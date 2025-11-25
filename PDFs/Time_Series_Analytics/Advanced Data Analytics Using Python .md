@@ -1,0 +1,1 @@
+This book covers the application of Python and its libraries such as NumPy, pandas, and scikit-learn to perform advanced data analytics tasks, including data visualization and modeling.
