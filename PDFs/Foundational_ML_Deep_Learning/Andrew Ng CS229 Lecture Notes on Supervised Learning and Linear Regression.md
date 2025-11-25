@@ -1,0 +1,1 @@
+Supervised learning is a type of machine learning where an algorithm learns a mapping between inputs and outputs based on labeled training data to make predictions or classify new instances.
