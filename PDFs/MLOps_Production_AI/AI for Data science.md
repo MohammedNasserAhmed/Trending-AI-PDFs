@@ -1,0 +1,1 @@
+This book provides an in-depth exploration of the integration of Artificial Intelligence (AI) and Data Science, offering a comprehensive guide to building AI-powered data science solutions.
