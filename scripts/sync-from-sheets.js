@@ -49,6 +49,42 @@ async function fetchSheetData() {
 }
 
 /**
+ * Map old sections to new modern sections
+ */
+function mapSectionName(oldSection, title = '') {
+  const section = (oldSection || '').trim();
+  const titleLower = (title || '').toLowerCase();
+  
+  // Direct mappings
+  const mappings = {
+    'Foundational_ML_Deep_Learning': 'Data Science & Fundamentals',
+    'NLP_Transformers': 'Generative AI & LLMs',
+    'Computer_Vision': 'Generative AI & LLMs', // Most CV is now GenAI
+    'Reinforcement_Learning': 'AI Agents & Agentic Workflows',
+    'AI_Ethics': 'Enterprise & Business AI', // Often business reports
+    'Time_Series_Analytics': 'Data Science & Fundamentals',
+    'MLOps_Production_AI': 'AI Engineering & MLOps'
+  };
+
+  // Check for specific keywords to override mapping
+  if (titleLower.includes('agent') || titleLower.includes('autogpt')) {
+    return 'AI Agents & Agentic Workflows';
+  }
+  if (titleLower.includes('prompt') || titleLower.includes('prompting')) {
+    return 'Prompt Engineering';
+  }
+  if (titleLower.includes('tool') || titleLower.includes('encyclopedia')) {
+    return 'Tools & Productivity';
+  }
+  if (titleLower.includes('roadmap') || titleLower.includes('engineer')) {
+    return 'AI Engineering & MLOps';
+  }
+
+  // Return mapped section or original if no map found
+  return mappings[section] || section || 'Uncategorized';
+}
+
+/**
  * Convert sheet rows to catalog objects
  */
 function convertToCatalog(rows) {
@@ -80,7 +116,7 @@ function convertToCatalog(rows) {
             entry.summary = value;
             break;
           case 'section':
-            entry.section = value;
+            entry.section = mapSectionName(value, row[headers.indexOf('title')]);
             break;
           case 'link':
           case 'url':
