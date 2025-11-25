@@ -1,0 +1,1 @@
+This PDF guide provides a step-by-step introduction to the Nano Banana prompting technique, a method for crafting effective prompts for AI models.
