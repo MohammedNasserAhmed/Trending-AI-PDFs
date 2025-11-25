@@ -1,0 +1,1 @@
+The PDF outlines a step-by-step AI and MLOps roadmap for building a generative AI portfolio, covering fundamental concepts, technical skills, and best practices for achieving AI-related goals.
