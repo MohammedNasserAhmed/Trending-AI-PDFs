@@ -1,0 +1,1 @@
+The banking industry is evolving rapidly, driven by advances in artificial intelligence, and Accenture explores the potential of AI to transform banking services and create a new reality.
