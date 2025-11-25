@@ -1,0 +1,1 @@
+This book provides an introduction to applied machine learning with Python, covering data preparation, model selection, and deployment of models, along with real-world examples and case studies.
