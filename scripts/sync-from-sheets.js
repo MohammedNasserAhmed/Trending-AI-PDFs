@@ -160,9 +160,15 @@ async function syncCatalog() {
       console.log('\n⚠️  Proceeding with warnings...\n');
     }
     
-    // Write to file
+    // Write to docs/catalog.json (Original location)
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(catalog, null, 2), 'utf-8');
     console.log(`✅ Updated ${OUTPUT_FILE}`);
+
+    // Write to public/catalog.json (Frontend location)
+    const publicOutputFile = path.join(__dirname, '../public/catalog.json');
+    fs.writeFileSync(publicOutputFile, JSON.stringify(catalog, null, 2), 'utf-8');
+    console.log(`✅ Updated ${publicOutputFile}`);
+
     console.log(`📊 Total PDFs: ${catalog.length}\n`);
     
     // Summary by section
