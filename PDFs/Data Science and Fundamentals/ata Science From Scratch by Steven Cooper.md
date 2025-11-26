@@ -1,0 +1,1 @@
+This book provides a comprehensive introduction to artificial intelligence, covering the fundamentals of machine learning, deep learning, and neural networks, allowing readers to build AI models from scratch.
