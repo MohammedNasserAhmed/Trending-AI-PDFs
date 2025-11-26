@@ -1,0 +1,1 @@
+This guide provides a comprehensive overview of GPT-4's capabilities, limitations, and best practices for crafting effective prompts to elicit informative and engaging responses from the model.
