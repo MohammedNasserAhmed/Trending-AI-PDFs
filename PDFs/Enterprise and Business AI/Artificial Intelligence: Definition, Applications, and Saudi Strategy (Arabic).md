@@ -1,0 +1,1 @@
+The report presents an overview of Artificial Intelligence (AI) concepts, its applications in various sectors, and Saudi Arabia's strategy for adopting AI technology to drive economic growth and improve services.
