@@ -1,0 +1,1 @@
+This document outlines 13 critical questions to guide data science projects, ensuring that key aspects such as problem formulation, data quality, and model evaluation are thoroughly considered.
