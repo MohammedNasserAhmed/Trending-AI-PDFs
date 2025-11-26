@@ -1,0 +1,1 @@
+This guide provides a step-by-step approach to crafting effective prompts for AI models, covering topics such as clarity, specificity, and tone to achieve desired results.
