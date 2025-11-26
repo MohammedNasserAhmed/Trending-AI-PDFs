@@ -1,0 +1,1 @@
+Claude outlines best practices for agentic coding, highlighting the importance of self-aware, adaptive, and proactive systems that can learn, reason, and interact with humans effectively.
