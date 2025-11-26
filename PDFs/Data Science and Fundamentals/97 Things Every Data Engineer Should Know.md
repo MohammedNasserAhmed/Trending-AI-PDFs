@@ -1,0 +1,1 @@
+This book offers practical advice and real-world examples on data engineering topics, providing a comprehensive guide for professionals and teams to design, build, and maintain large-scale data systems.
