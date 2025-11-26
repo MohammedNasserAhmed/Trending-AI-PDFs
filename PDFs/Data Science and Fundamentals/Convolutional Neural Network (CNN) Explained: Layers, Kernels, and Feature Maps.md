@@ -1,0 +1,1 @@
+A Convolutional Neural Network (CNN) is a deep learning model that uses convolutional layers, kernels, and feature maps to automatically and adaptively learn and extract relevant features from images.
