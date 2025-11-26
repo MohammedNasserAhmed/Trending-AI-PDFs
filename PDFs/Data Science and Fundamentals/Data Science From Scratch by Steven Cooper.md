@@ -1,0 +1,1 @@
+This book provides a hands-on introduction to Data Science techniques and AI concepts using Python, emphasizing practical implementation and real-world applications.
