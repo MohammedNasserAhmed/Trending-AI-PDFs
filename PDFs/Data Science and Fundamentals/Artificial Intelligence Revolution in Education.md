@@ -1,0 +1,1 @@
+This paper explores the integration of Artificial Intelligence in educational settings, highlighting its potential to personalize learning, improve student outcomes, and enhance teacher support through intelligent adaptive systems and data-driven insights.
