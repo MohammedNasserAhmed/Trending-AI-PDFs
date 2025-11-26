@@ -1,0 +1,1 @@
+This paper integrates statistical learning theory with deep learning to provide a unified framework for understanding the generalization capabilities of deep neural networks in the context of complex data distributions.
