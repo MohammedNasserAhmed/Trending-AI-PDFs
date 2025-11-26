@@ -1,0 +1,1 @@
+This guide helps educators effectively utilize large language models to create engaging and effective AI prompts for educational purposes, enhancing teaching and learning experiences.
