@@ -1,1 +1,0 @@
-This guide provides an overview of key concepts and prediction services in Amazon Machine Learning, enabling developers to build, deploy, and manage machine learning models with ease.

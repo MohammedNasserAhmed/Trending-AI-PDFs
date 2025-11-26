@@ -151,13 +151,13 @@ function getImageUrl(item) {
 
 function getSectionColor(section) {
   const colors = {
-    'AI Agents & Agentic Workflows': 'linear-gradient(135deg, #FF6B6B, #EE5253)',
-    'Generative AI & LLMs': 'linear-gradient(135deg, #4834D4, #686DE0)',
+    'AI Agents and Agentic Workflows': 'linear-gradient(135deg, #FF6B6B, #EE5253)',
+    'Generative AI and LLMs': 'linear-gradient(135deg, #4834D4, #686DE0)',
     'Prompt Engineering': 'linear-gradient(135deg, #F0932B, #FFBE76)',
-    'AI Engineering & MLOps': 'linear-gradient(135deg, #6AB04C, #BADC58)',
-    'Enterprise & Business AI': 'linear-gradient(135deg, #22A6B3, #7ED6DF)',
-    'Data Science & Fundamentals': 'linear-gradient(135deg, #30336B, #535C68)',
-    'Tools & Productivity': 'linear-gradient(135deg, #BE2EDD, #E056FD)',
+    'AI Engineering and MLOps': 'linear-gradient(135deg, #6AB04C, #BADC58)',
+    'Enterprise and Business AI': 'linear-gradient(135deg, #22A6B3, #7ED6DF)',
+    'Data Science and Fundamentals': 'linear-gradient(135deg, #30336B, #535C68)',
+    'Tools and Productivity': 'linear-gradient(135deg, #BE2EDD, #E056FD)',
     
     // Legacy mappings (fallback)
     'Foundational_ML_Deep_Learning': 'linear-gradient(135deg, #6fa8dc, #5a8bc4)',

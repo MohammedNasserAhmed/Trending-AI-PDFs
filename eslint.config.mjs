@@ -9,13 +9,14 @@ export default [
     files: ['scripts/**/*.js'],
     languageOptions: {
       ecmaVersion: 2021,
-      sourceType: 'script',
+      sourceType: 'module',
       globals: {
         console: 'readonly',
         process: 'readonly',
         require: 'readonly',
         module: 'readonly',
-        __dirname: 'readonly'
+        __dirname: 'readonly',
+        fetch: 'readonly'
       }
     },
     plugins: {
@@ -26,6 +27,36 @@ export default [
       'prefer-const': 'warn',
       'no-unused-vars': ['warn', { args: 'none' }],
       'prettier/prettier': 'warn'
+    }
+  },
+  {
+    files: ['src/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        document: 'readonly',
+        window: 'readonly',
+        navigator: 'readonly',
+        fetch: 'readonly',
+        console: 'readonly',
+        localStorage: 'readonly',
+        alert: 'readonly',
+        location: 'readonly',
+        history: 'readonly',
+        URL: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        Image: 'readonly',
+        Option: 'readonly',
+        HTMLElement: 'readonly',
+        Event: 'readonly',
+        CustomEvent: 'readonly'
+      }
     }
   },
   {

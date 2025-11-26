@@ -1,1 +1,0 @@
-The report highlights trends in generative AI, data science and machine learning, emphasizing the importance of responsible AI development and usage in real-world applications and future breakthroughs.
