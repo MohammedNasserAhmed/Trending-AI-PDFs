@@ -97,9 +97,7 @@
   border: 1px solid transparent;
 }
 
-.download-link::before {
-  content: '⬇️';
-}
+
 
 .download-link:hover {
   transform: scale(1.05) translateY(-2px);
