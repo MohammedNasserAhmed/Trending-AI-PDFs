@@ -55,33 +55,53 @@ function mapSectionName(oldSection, title = '') {
   const section = (oldSection || '').trim();
   const titleLower = (title || '').toLowerCase();
 
-  // Direct mappings
-  const mappings = {
-    Foundational_ML_Deep_Learning: 'Data Science and Fundamentals',
-    NLP_Transformers: 'Generative AI and LLMs',
-    Computer_Vision: 'Generative AI and LLMs', // Most CV is now GenAI
-    Reinforcement_Learning: 'AI Agents and Agentic Workflows',
-    AI_Ethics: 'Enterprise and Business AI', // Often business reports
-    Time_Series_Analytics: 'Data Science and Fundamentals',
-    MLOps_Production_AI: 'AI Engineering and MLOps'
-  };
-
-  // Check for specific keywords to override mapping
-  if (titleLower.includes('agent') || titleLower.includes('autogpt')) {
-    return 'AI Agents and Agentic Workflows';
-  }
-  if (titleLower.includes('prompt') || titleLower.includes('prompting')) {
+  // 1. Prompt Engineering (Specific)
+  if (titleLower.includes('prompt') || titleLower.includes('jailbreak')) {
     return 'Prompt Engineering';
   }
-  if (titleLower.includes('tool') || titleLower.includes('encyclopedia')) {
+
+  // 2. AI Agents (Specific)
+  if (titleLower.includes('agent') || titleLower.includes('autogpt') || titleLower.includes('babyagi') || titleLower.includes('multi-agent')) {
+    return 'AI Agents and Agentic Workflows';
+  }
+
+  // 3. Tools (Specific)
+  if (titleLower.includes('tool') || titleLower.includes('productivity') || titleLower.includes('vs code') || titleLower.includes('cursor') || titleLower.includes('excel') || titleLower.includes('ide')) {
     return 'Tools and Productivity';
   }
-  if (titleLower.includes('roadmap') || titleLower.includes('engineer')) {
+
+  // 4. Engineering & MLOps (Specific)
+  if (titleLower.includes('mlops') || titleLower.includes('engineering') || titleLower.includes('production') || titleLower.includes('deployment') || titleLower.includes('architecture') || titleLower.includes('system') || titleLower.includes('devops')) {
     return 'AI Engineering and MLOps';
   }
 
-  // Return mapped section or original if no map found
-  return mappings[section] || section || 'Uncategorized';
+  // 5. Enterprise & Business (Contextual)
+  if (titleLower.includes('business') || titleLower.includes('enterprise') || titleLower.includes('finance') || titleLower.includes('market') || titleLower.includes('report') || titleLower.includes('state of') || titleLower.includes('economics') || titleLower.includes('strategy') || titleLower.includes('adoption')) {
+    return 'Enterprise and Business AI';
+  }
+
+  // 6. Data Science (Broad)
+  if (titleLower.includes('data science') || titleLower.includes('fundamentals') || titleLower.includes('statistics') || titleLower.includes('math') || titleLower.includes('probability') || titleLower.includes('linear algebra') || titleLower.includes('python') || titleLower.includes('pandas') || titleLower.includes('numpy') || titleLower.includes('scikit') || titleLower.includes('machine learning') || titleLower.includes('deep learning')) {
+    return 'Data Science and Fundamentals';
+  }
+
+  // 7. Generative AI (Catch-all for modern AI)
+  if (titleLower.includes('llm') || titleLower.includes('generative') || titleLower.includes('transformer') || titleLower.includes('gpt') || titleLower.includes('diffusion') || titleLower.includes('language model') || titleLower.includes('rag') || titleLower.includes('retrieval') || titleLower.includes('text-to-image')) {
+    return 'Generative AI and LLMs';
+  }
+
+  // Direct mappings for old section names if no keywords matched
+  const mappings = {
+    'Foundational_ML_Deep_Learning': 'Data Science and Fundamentals',
+    'NLP_Transformers': 'Generative AI and LLMs',
+    'Computer_Vision': 'Generative AI and LLMs',
+    'Reinforcement_Learning': 'AI Agents and Agentic Workflows',
+    'AI_Ethics': 'Enterprise and Business AI',
+    'Time_Series_Analytics': 'Data Science and Fundamentals',
+    'MLOps_Production_AI': 'AI Engineering and MLOps'
+  };
+
+  return mappings[section] || section || 'Generative AI and LLMs';
 }
 
 /**
