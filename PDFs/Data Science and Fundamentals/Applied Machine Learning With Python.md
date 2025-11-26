@@ -1,0 +1,1 @@
+This book provides a comprehensive guide to applied machine learning with Python, covering data preprocessing, feature engineering, model selection, and deployment of machine learning models in real-world applications.
