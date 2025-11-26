@@ -137,8 +137,12 @@ function createTableRow(item) {
 
 function getImageUrl(item) {
   if (item.image) {
-    // Convert Google Drive URLs to direct image URLs
-    return convertGoogleDriveUrl(item.image);
+    // Check if it's a Google Drive URL
+    if (item.image.includes('drive.google.com')) {
+      return convertGoogleDriveUrl(item.image);
+    }
+    // Otherwise return as is (e.g. S3, direct links)
+    return item.image;
   }
   
   // Derive from link if available
