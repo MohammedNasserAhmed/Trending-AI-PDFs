@@ -34,7 +34,9 @@ async function fetchSheetData() {
     throw new Error('Missing required environment variables: GOOGLE_SHEETS_ID or GOOGLE_API_KEY');
   }
 
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
+  // Add cache buster to prevent stale data
+  const cacheBuster = new Date().getTime();
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}&t=${cacheBuster}`;
 
   console.log('📥 Fetching data from Google Sheets...');
 
