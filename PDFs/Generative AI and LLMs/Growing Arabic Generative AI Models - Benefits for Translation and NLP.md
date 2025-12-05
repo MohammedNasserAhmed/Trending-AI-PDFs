@@ -1,0 +1,1 @@
+This paper explores the benefits of growing Arabic generative AI models for translation and natural language processing, improving language understanding and generation capabilities.
