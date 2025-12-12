@@ -1,19 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-const { spawnSync } = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import { spawnSync } from 'child_process';
 
-function parseCsv(text) {
-  const lines = text.split(/\r?\n/).filter((l) => l.trim().length > 0);
-  const header = lines[0].split(',');
-  const rows = [];
-  for (let i = 1; i < lines.length; i++) {
-    const cols = lines[i].split(',');
-    const obj = {};
-    header.forEach((h, idx) => (obj[h] = cols[idx] || ''));
-    rows.push(obj);
-  }
-  return rows;
-}
+
 
 function isLocalPdf(link) {
   return link && !/^https?:\/\//.test(link) && link.toLowerCase().endsWith('.pdf');

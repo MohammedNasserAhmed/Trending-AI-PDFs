@@ -3,8 +3,6 @@
  * Modern navigation bar with GitHub stats
  */
 
-import { getState, subscribe } from '../../state/store.js';
-import { createLink } from '../../router/router.js';
 import { autoRefreshGitHubStats } from '../../features/github/services/githubService.js';
 import './Navbar.css';
 
