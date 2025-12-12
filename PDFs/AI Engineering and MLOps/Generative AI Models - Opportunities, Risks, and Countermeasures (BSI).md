@@ -1,0 +1,1 @@
+This report provides a comprehensive overview of generative AI models, discussing opportunities, risks, and countermeasures to ensure safe and responsible development and use in various sectors and industries.
