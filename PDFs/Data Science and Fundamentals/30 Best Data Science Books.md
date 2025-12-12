@@ -1,1 +1,0 @@
-Discover the top 30 data science books covering topics from machine learning and deep learning to data visualization and statistics, perfect for professionals and beginners alike.

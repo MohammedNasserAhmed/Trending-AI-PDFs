@@ -1,1 +1,0 @@
-This paper discusses the integration of AI in software development, covering AI-assisted tools, their benefits, and limitations, as well as the potential impact on the industry's future.

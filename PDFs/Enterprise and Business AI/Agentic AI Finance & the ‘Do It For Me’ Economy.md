@@ -1,1 +1,0 @@
-The 'Do It For Me' economy is driven by agentic AI, which assumes increasing responsibility for personal and professional tasks, blurring lines between work and life.

@@ -1,1 +1,0 @@
-Automated Machine Learning (AutoML) simplifies the machine learning process by automating tasks, such as model selection, hyperparameter tuning, and model interpretation, to produce accurate and efficient models.

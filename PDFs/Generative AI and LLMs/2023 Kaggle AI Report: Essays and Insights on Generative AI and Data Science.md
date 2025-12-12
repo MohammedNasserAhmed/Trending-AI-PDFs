@@ -1,1 +1,0 @@
-The report highlights the growth of Generative AI and Data Science, with key findings on applications, challenges, and future directions in these emerging fields of artificial intelligence.

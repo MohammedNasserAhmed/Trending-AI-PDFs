@@ -1,1 +1,0 @@
-This comprehensive cookbook for data engineers offers recipes and best practices for designing, building, and maintaining scalable data pipelines, covering data ingestion, processing, and storage.

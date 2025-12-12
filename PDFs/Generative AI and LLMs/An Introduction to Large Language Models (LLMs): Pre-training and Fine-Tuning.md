@@ -1,1 +1,0 @@
-This introduction explores the architecture and applications of Large Language Models (LLMs), covering pre-training and fine-tuning techniques, including masked language modeling and next sentence prediction.

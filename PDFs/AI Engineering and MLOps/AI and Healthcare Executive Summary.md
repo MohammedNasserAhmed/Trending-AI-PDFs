@@ -1,1 +1,0 @@
-Artificial intelligence (AI) is transforming the healthcare industry by enhancing clinical decision-making, streamlining administrative tasks, and improving patient outcomes through data-driven insights and personalized medicine.

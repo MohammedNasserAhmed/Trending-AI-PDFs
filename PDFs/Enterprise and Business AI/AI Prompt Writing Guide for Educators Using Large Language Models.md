@@ -1,1 +1,0 @@
-This guide helps educators create effective AI prompts for large language models, enhancing student learning outcomes and promoting critical thinking, creativity, and effective communication.

@@ -1,1 +1,0 @@
-This PDF introduces the concept of agents in Artificial Intelligence, covering their definition, types, and applications, including multi-agent systems, reactive and cognitive agents, and agent-based modeling.

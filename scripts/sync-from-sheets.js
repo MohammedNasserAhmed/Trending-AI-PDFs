@@ -246,9 +246,15 @@ async function syncCatalog() {
     console.log('\n✨ Sync complete!');
   } catch (error) {
     console.error('❌ Sync failed:', error.message);
-    process.exit(1);
+    // Do not exit process when running as a module
+    // process.exit(1);
   }
 }
 
-// Run sync
-syncCatalog();
+// Export for use in server
+export { syncCatalog };
+
+// Run sync if executed directly
+if (process.argv[1] === __filename) {
+  syncCatalog();
+}

@@ -1,1 +1,0 @@
-This document provides a comprehensive guide to creating and implementing Realtime Voice AI Agents, outlining key concepts, design principles, and technical requirements for successful implementation.

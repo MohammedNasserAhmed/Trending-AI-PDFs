@@ -5,6 +5,7 @@ import { testConnection, initializeSchema } from './db/client.js';
 import trackingRouter from './api/tracking.js';
 import analyticsRouter from './api/analytics.js';
 import githubRouter from './api/github.js';
+import { syncCatalog } from '../scripts/sync-from-sheets.js';
 
 dotenv.config();
 
@@ -73,6 +74,14 @@ async function startServer() {
       console.log(`📡 Listening on port ${PORT}`);
       console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
       console.log(`💚 Health check: http://localhost:${PORT}/health\n`);
+
+      // Initial sync and schedule
+      // Initial sync and schedule
+      console.log('⏱️  Scheduling catalog sync every 60 seconds...');
+      syncCatalog().catch(err => console.error('Initial sync failed:', err));
+      setInterval(() => {
+        syncCatalog().catch(err => console.error('Scheduled sync failed:', err));
+      }, 60000);
     });
   } catch (error) {
     console.error('Failed to start server:', error);

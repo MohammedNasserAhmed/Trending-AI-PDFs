@@ -1,1 +1,0 @@
-This report explores the impact of generative AI on professional services, highlighting its applications, benefits, and challenges, and providing guidance for businesses to leverage AI effectively.

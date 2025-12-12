@@ -1,1 +1,0 @@
-This document explores the integration of artificial intelligence (AI) in the enterprise, highlighting its potential to drive innovation, improve efficiency, and enhance decision-making capabilities.

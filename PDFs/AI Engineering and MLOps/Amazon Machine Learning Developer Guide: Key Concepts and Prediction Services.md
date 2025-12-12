@@ -1,1 +1,0 @@
-This guide provides a comprehensive overview of Amazon Machine Learning, covering key concepts and prediction services, enabling developers to build, deploy, and manage machine learning models in the cloud.

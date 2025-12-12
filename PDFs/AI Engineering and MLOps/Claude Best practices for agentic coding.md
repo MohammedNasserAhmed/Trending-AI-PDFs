@@ -1,1 +1,0 @@
-Claude outlines key principles and techniques for effective agentic coding, emphasizing adaptability, self-awareness, and continuous learning to improve software development processes and outcomes.

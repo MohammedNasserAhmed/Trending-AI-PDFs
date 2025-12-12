@@ -1,1 +1,0 @@
-Big data analytics plays a crucial role in driving business performance by providing real-time insights, improving decision-making, and enabling data-driven strategies for enhanced competitiveness.

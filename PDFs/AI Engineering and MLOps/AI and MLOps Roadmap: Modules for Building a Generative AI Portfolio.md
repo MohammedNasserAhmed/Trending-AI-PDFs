@@ -1,1 +1,0 @@
-This roadmap provides a structured approach to building a generative AI portfolio, covering key modules, tools, and techniques for data preparation, model training, deployment, and maintenance.

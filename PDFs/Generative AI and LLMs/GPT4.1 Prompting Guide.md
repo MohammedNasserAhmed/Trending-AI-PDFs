@@ -1,1 +1,0 @@
-GPT-4.1 is designed to generate human-like text and can be used for a variety of applications, including answering questions, generating creative content, and assisting with tasks.
