@@ -37,7 +37,10 @@ app.get('/health', (req, res) => {
 app.use('/api/tracking', trackingRouter);
 app.use('/api/analytics', analyticsRouter);
 app.use('/api/github', githubRouter);
+
+console.log('🔧 Mounting Catalog API...');
 app.use('/api/catalog', catalogRouter);
+app.get('/api/debug', (req, res) => res.send('Server is updated!'));
 
 // 404 handler
 app.use((req, res) => {
@@ -85,4 +88,10 @@ async function startServer() {
   }
 }
 
-startServer();
+// Export app for Vercel
+export default app;
+
+// Only start the server if we're not in a serverless environment (e.g. local dev)
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+  startServer();
+}

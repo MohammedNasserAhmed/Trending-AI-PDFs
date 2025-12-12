@@ -21,8 +21,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configuration
-const SHEET_ID = process.env.GOOGLE_SHEETS_ID;
-const API_KEY = process.env.GOOGLE_API_KEY;
 const SHEET_NAME = 'TrendingPdfsSHT'; // Name of the sheet tab
 const OUTPUT_FILE = path.join(__dirname, '../docs/catalog.json');
 
@@ -30,6 +28,9 @@ const OUTPUT_FILE = path.join(__dirname, '../docs/catalog.json');
  * Fetch data from Google Sheets
  */
 async function fetchSheetData() {
+  const SHEET_ID = process.env.GOOGLE_SHEETS_ID;
+  const API_KEY = process.env.GOOGLE_API_KEY;
+
   if (!SHEET_ID || !API_KEY) {
     throw new Error('Missing required environment variables: GOOGLE_SHEETS_ID or GOOGLE_API_KEY');
   }
