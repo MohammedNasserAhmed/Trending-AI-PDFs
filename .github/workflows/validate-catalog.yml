@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: |
           mkdir -p scripts
-      - name: Validate catalog.csv
+      - name: Validate catalog.json
         run: node scripts/validate_catalog.js
       - name: Generate covers
         run: |
@@ -27,8 +27,7 @@ jobs:
         with:
           name: covers
           path: images
-      - name: Generate catalog.json
-        run: node scripts/csv_to_json.js
+
       - name: Upload catalog.json
         uses: actions/upload-artifact@v4
         with:

@@ -31,51 +31,49 @@ function checkUrl(url) {
   });
 }
 
+
 (async function main() {
-  const p = path.join(process.cwd(), 'docs', 'catalog.csv');
+  const p = path.join(process.cwd(), 'docs', 'catalog.json');
   if (!fs.existsSync(p)) {
-    console.error('catalog.csv missing');
+    console.error('catalog.json missing');
     process.exit(1);
   }
-  const text = fs.readFileSync(p, 'utf8');
-  const { header, rows } = parseCsv(text);
-  const required = ['Title', 'Section', 'Link', 'Image'];
-  for (const r of required) {
-    if (!header.includes(r)) {
-      console.error('Missing column', r);
-      process.exit(1);
-    }
+  
+  let items = [];
+  try {
+    items = JSON.parse(fs.readFileSync(p, 'utf8'));
+  } catch (e) {
+    console.error('Invalid JSON');
+    process.exit(1);
   }
+
   const errs = [];
   const warns = [];
-  for (let i = 0; i < rows.length; i++) {
-    const row = rows[i];
-    for (const k of required) {
-      if (!row[k] || row[k].trim() === '') errs.push(`Row ${i + 2} empty ${k}`);
+  
+  items.forEach((entry, i) => {
+    if (!entry.title) errs.push(`Item ${i}: Missing title`);
+    if (!entry.link) errs.push(`Item ${i}: Missing link`);
+    
+    const link = entry.link;
+    if (link && !/^https?:\/\//.test(link)) {
+       const normalizedLink = link.replace(/^\.?\//, '');
+       const lp = path.join(process.cwd(), normalizedLink);
+       if (!fs.existsSync(lp)) warns.push(`Item ${i} missing file ${link}`);
     }
-    const link = row.Link;
-    if (/^https?:\/\//.test(link)) {
-      const ok = await checkUrl(link);
-      if (!ok) errs.push(`Row ${i + 2} bad link ${link}`);
-    } else {
-      const lp = path.join(process.cwd(), link);
-      if (!fs.existsSync(lp)) warns.push(`Row ${i + 2} missing file ${link}`);
+    
+    // Image check
+    const img = entry.image;
+    if (img && !/^https?:\/\//.test(img)) {
+       const normalizedImg = img.replace(/^\.?\//, '');
+       const ip = path.join(process.cwd(), normalizedImg);
+       if (!fs.existsSync(ip)) warns.push(`Item ${i} missing image ${img}`);
     }
-    const img = row.Image;
-    if (img) {
-      if (/^https?:\/\//.test(img)) {
-        const ok = await checkUrl(img);
-        if (!ok) warns.push(`Row ${i + 2} bad image ${img}`);
-      } else {
-        const ip = path.join(process.cwd(), img);
-        if (!fs.existsSync(ip)) warns.push(`Row ${i + 2} missing image ${img}`);
-      }
-    }
-  }
+  });
+
   warns.forEach((w) => console.warn(w));
   if (errs.length) {
     errs.forEach((e) => console.error(e));
     process.exit(1);
   }
-  console.log('catalog.csv validation passed with', warns.length, 'warnings');
+  console.log('catalog.json validation passed with', warns.length, 'warnings');
 })();

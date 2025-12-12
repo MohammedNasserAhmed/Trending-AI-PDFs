@@ -6,7 +6,8 @@ import trackingRouter from './api/tracking.js';
 import analyticsRouter from './api/analytics.js';
 import catalogRouter from './api/catalog.js';
 import githubRouter from './api/github.js';
-import { syncCatalog } from '../scripts/sync-from-sheets.js';
+
+
 
 dotenv.config();
 

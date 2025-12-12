@@ -23,7 +23,7 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y poppler-utils
           node scripts/generate_covers.js
-          node scripts/csv_to_json.js
+          node scripts/generate_covers.js
       - name: Prepare assets directory
         run: |
           rm -rf out-assets

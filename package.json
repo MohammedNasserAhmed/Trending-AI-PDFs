@@ -11,7 +11,8 @@
     "server": "node server/server.js",
     "dev:fullstack": "concurrently \"npm run dev\" \"npm run server\"",
     "sync-catalog": "node scripts/sync-from-sheets.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:ci": "eslint ."
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.9.0",
