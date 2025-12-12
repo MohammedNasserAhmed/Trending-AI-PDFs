@@ -1,24 +1,64 @@
-import catalogRouter from '../server/api/catalog.js';
-import express from 'express';
-import { corsMiddleware } from '../server/middleware/cors.js';
+import { fetchSheetData, convertToCatalog } from '../scripts/sync-from-sheets.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
-const app = express();
-app.use(corsMiddleware);
-app.use(express.json());
-app.use('/', catalogRouter);
+// In-memory cache
+let catalogCache = null;
+let lastFetchTime = 0;
+const CACHE_TTL = 60 * 1000; // 60 seconds
 
-// Vercel serverless function handler
+async function getCatalogData() {
+  const now = Date.now();
+  
+  if (catalogCache && (now - lastFetchTime < CACHE_TTL)) {
+    return catalogCache;
+  }
+
+  try {
+    console.log('🔄 Fetching fresh catalog data from Sheets...');
+    const rows = await fetchSheetData();
+    const catalog = convertToCatalog(rows);
+    
+    catalogCache = catalog;
+    lastFetchTime = now;
+    console.log(`✅ Cache updated with ${catalog.length} items`);
+    
+    return catalog;
+  } catch (error) {
+    console.error('❌ Failed to update catalog cache:', error);
+    if (catalogCache) {
+      console.warn('⚠️ Serving stale cache due to fetch error');
+      return catalogCache;
+    }
+    throw error;
+  }
+}
+
 export default async function handler(req, res) {
-  return new Promise((resolve, reject) => {
-    app(req, res, (err) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve();
-      }
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
+  if (req.method !== 'GET') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+  }
+
+  try {
+    const catalog = await getCatalogData();
+    res.status(200).json(catalog);
+  } catch (error) {
+    console.error('Catalog API Error:', error);
+    res.status(500).json({ 
+      error: 'Failed to fetch catalog data',
+      message: error.message 
     });
-  });
+  }
 }
