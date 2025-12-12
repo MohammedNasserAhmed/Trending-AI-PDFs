@@ -8,9 +8,8 @@
  */
 export async function fetchCatalog() {
   try {
-    // Fetch from the public folder
-    // In Vite, files in the public folder are served from root in production
-    const catalogUrl = '/catalog.json';
+    // Fetch from the new In-Memory API
+    const catalogUrl = '/api/catalog';
     const response = await fetch(catalogUrl);
     
     if (!response.ok) {

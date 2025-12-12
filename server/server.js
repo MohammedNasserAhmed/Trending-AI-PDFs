@@ -4,6 +4,7 @@ import { corsMiddleware } from './middleware/cors.js';
 import { testConnection, initializeSchema } from './db/client.js';
 import trackingRouter from './api/tracking.js';
 import analyticsRouter from './api/analytics.js';
+import catalogRouter from './api/catalog.js';
 import githubRouter from './api/github.js';
 import { syncCatalog } from '../scripts/sync-from-sheets.js';
 
@@ -36,6 +37,7 @@ app.get('/health', (req, res) => {
 app.use('/api/tracking', trackingRouter);
 app.use('/api/analytics', analyticsRouter);
 app.use('/api/github', githubRouter);
+app.use('/api/catalog', catalogRouter);
 
 // 404 handler
 app.use((req, res) => {
@@ -75,13 +77,7 @@ async function startServer() {
       console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
       console.log(`💚 Health check: http://localhost:${PORT}/health\n`);
 
-      // Initial sync and schedule
-      // Initial sync and schedule
-      console.log('⏱️  Scheduling catalog sync every 60 seconds...');
-      syncCatalog().catch(err => console.error('Initial sync failed:', err));
-      setInterval(() => {
-        syncCatalog().catch(err => console.error('Scheduled sync failed:', err));
-      }, 60000);
+      console.log('✨ Server ready');
     });
   } catch (error) {
     console.error('Failed to start server:', error);

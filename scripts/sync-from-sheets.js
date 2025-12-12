@@ -252,7 +252,7 @@ async function syncCatalog() {
 }
 
 // Export for use in server
-export { syncCatalog };
+export { syncCatalog, fetchSheetData, convertToCatalog };
 
 // Run sync if executed directly
 if (process.argv[1] === __filename) {
