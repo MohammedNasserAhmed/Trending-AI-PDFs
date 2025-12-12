@@ -5,12 +5,6 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "vite",
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "/api/index"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
