@@ -2,7 +2,8 @@
  * API Client for communicating with backend
  */
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+// Use relative paths in production, localhost in development
+const API_BASE_URL = import.meta.env.DEV ? 'http://localhost:3000' : '';
 
 class APIClient {
   constructor(baseURL) {
