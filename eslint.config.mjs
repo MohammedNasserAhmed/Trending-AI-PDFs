@@ -30,6 +30,27 @@ export default [
     }
   },
   {
+    files: ['server/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        fetch: 'readonly'
+      }
+    },
+    rules: {
+      'no-console': 'off',
+      'no-unused-vars': ['warn', { args: 'none' }]
+    }
+  },
+  {
     files: ['src/**/*.js'],
     languageOptions: {
       ecmaVersion: 2021,
