@@ -49,7 +49,21 @@ This project was created to address the challenge of navigating the vast landsca
 
 ---
 
-## 🛠️ Features
+## 🛠️ Tools & Technologies
+ 
+| Tool | Purpose |
+| :--- | :--- |
+| **🔄 n8n** | Automate fetching PDF data and populating Google Sheets |
+| **📊 Google Sheet** | Metadata database and primary application source |
+| **🧩 AntiGravity** | AI Agent for building the application interface, data fetching, and search |
+| **🐙 GitHub** | Code hosting and version control linked to deployment |
+| **🚀 Vercel** | Instant deployment and automatic updates on push |
+
+**⭐ Result:** A smart, self-updating PDF platform.
+
+---
+
+## �️ Features
 
 ✨ **Comprehensive Coverage**: Books spanning all major AI disciplines  
 🔗 **Direct Access**: Instant downloads of full PDFs  
@@ -93,27 +107,29 @@ ls -la
 <details>
 <summary>🚀 Quick Start Guide</summary>
 
-1. **Foundational ML & Deep Learning**: Start here if you're new to AI
-2. **NLP & Transformers**: Dive into language processing techniques
-3. **Computer Vision**: Explore image and video analysis methods
-4. **Reinforcement Learning**: Learn about decision-making algorithms
-5. **AI Ethics**: Understand the societal implications of AI
-6. **Time Series Analytics**: Master temporal data prediction
-7. **MLOps & Production AI**: Deploy AI systems at scale
+1. **AI Agents & Workflows**: Autonomous agents and multi-agent systems
+2. **Generative AI & LLMs**: Transformers, RAG, and large language models
+3. **Prompt Engineering**: Optimization and jailbreaking techniques
+4. **Data Science & Fundamentals**: Core math, stats, and Python/ML basics
+5. **AI Engineering & MLOps**: Deployment, monitoring, and production AI
+6. **Enterprise & Business AI**: AI adoption, strategy, and market impact
+7. **Tools & Productivity**: IDEs and productivity tools for AI
 
 </details>
 
 ---
 
-## 📂 Project Structure
+## �📂 Project Structure
 
-- `Foundational_ML_Deep_Learning` — core machine learning principles, deep learning architectures, optimization, and representation learning.
-- `NLP_Transformers` — natural language processing, transformer models, tokenization, pretraining, fine-tuning, and evaluation.
-- `Computer_Vision` — image and video understanding, detection, segmentation, generative vision, and multimodal perception.
-- `Reinforcement_Learning` — sequential decision-making, policies, value functions, exploration, and model-based/model-free RL.
-- `AI_Ethics` — fairness, accountability, transparency, safety, governance, and societal impact of AI systems.
-- `Time_Series_Analytics` — temporal modeling, forecasting, seasonality, anomalies, and probabilistic time series methods.
-- `MLOps_Production_AI` — productionizing ML systems: data pipelines, deployment, monitoring, CI/CD, and reliability.
+The repository is organized into the following modern AI categories:
+
+- **AI Agents and Agentic Workflows** — Autonomous agents, multi-agent systems, and workflows.
+- **Generative AI and LLMs** — Large Language Models, RAG, transformers, and generative techniques.
+- **Prompt Engineering** — Techniques for optimizing model outputs and jailbreaking.
+- **AI Engineering and MLOps** — Production, deployment, system architecture, and DevOps for AI.
+- **Enterprise and Business AI** — Strategic adoption, market reports, finance, and business impact.
+- **Data Science and Fundamentals** — Core math, statistics, python, and foundational ML.
+- **Tools and Productivity** — VS Code, Cursor, and productivity tools for AI dev.
 
 ---
 
@@ -122,22 +138,22 @@ ls -la
 ```mermaid
 flowchart TB
     A[Trending AI PDFs]:::root
-    A --> B[Foundational ML & DL]:::dl
-    A --> C[NLP & Transformers]:::nlp
-    A --> D[Computer Vision]:::cv
-    A --> E[Reinforcement Learning]:::rl
-    A --> F[AI Ethics]:::ethics
-    A --> G[Time Series Analytics]:::ts
-    A --> H[MLOps & Production AI]:::mlops
+    A --> B[AI Agents & Workflows]:::agents
+    A --> C[Generative AI & LLMs]:::genai
+    A --> D[Prompt Engineering]:::prompt
+    A --> E[AI Engineering & MLOps]:::mlops
+    A --> F[Enterprise & Business AI]:::biz
+    A --> G[Data Science & Fundamentals]:::ds
+    A --> H[Tools & Productivity]:::tools
 
     classDef root fill:#1f2937,color:#ffffff,stroke:#334155,stroke-width:2px
-    classDef dl fill:#6fa8dc,color:#111827,stroke:#3d75a1
-    classDef nlp fill:#ffd966,color:#111827,stroke:#c4a300
-    classDef cv fill:#93c47d,color:#111827,stroke:#5a8b49
-    classDef rl fill:#e69138,color:#111827,stroke:#b45f06
-    classDef ethics fill:#c27ba0,color:#111827,stroke:#7d3f65
-    classDef ts fill:#76a5af,color:#111827,stroke:#3b6a70
+    classDef agents fill:#e69138,color:#111827,stroke:#b45f06
+    classDef genai fill:#ffd966,color:#111827,stroke:#c4a300
+    classDef prompt fill:#c27ba0,color:#111827,stroke:#7d3f65
     classDef mlops fill:#8e7cc3,color:#111827,stroke:#5b4b8a
+    classDef biz fill:#6fa8dc,color:#111827,stroke:#3d75a1
+    classDef ds fill:#76a5af,color:#111827,stroke:#3b6a70
+    classDef tools fill:#93c47d,color:#111827,stroke:#5a8b49
 ```
 
 - For an interactive, animated version, open `docs/index.html` in this repository.
