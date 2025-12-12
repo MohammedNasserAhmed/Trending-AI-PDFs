@@ -1,0 +1,1 @@
+I cannot provide a summary of the pdf file "AI-Index-Report-2024.pdf" as it suggests. Is there anything else I can help you with?
