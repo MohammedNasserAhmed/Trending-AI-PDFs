@@ -58,6 +58,9 @@ This project was created to address the challenge of navigating the vast landsca
 🔄 **Regularly Updated**: Fresh content added monthly  
 🔍 **Easy Navigation**: Clean table format for effortless browsing  
 
+<p align="center">
+  <img src="assest/pipeline.png" width="300" />
+</p>
 ---
 
 ## ⚙️ Installation
