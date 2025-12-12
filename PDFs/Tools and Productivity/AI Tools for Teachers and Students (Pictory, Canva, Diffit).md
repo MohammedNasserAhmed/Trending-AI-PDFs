@@ -1,0 +1,1 @@
+This guide explores AI tools Pictory, Canva, and Diffit to assist teachers in creating engaging educational content and enhance student learning experiences through automated video and graphic creation.
