@@ -1,0 +1,1 @@
+This book explores Facebook's innovative machine learning technologies, DeepFace for facial recognition and DeepText for text analysis, to drive insights and automation in various applications.
