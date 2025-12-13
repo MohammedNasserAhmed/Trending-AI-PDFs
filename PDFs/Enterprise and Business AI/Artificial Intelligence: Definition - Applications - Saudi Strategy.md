@@ -1,0 +1,1 @@
+This report provides an overview of Artificial Intelligence, its applications, and Saudi Arabia's strategy in harnessing AI technology for economic growth and development.
