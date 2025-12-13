@@ -1,0 +1,1 @@
+This book provides an introduction to deep learning, covering data manipulation and the fundamentals of linear algebra, laying the groundwork for further deep learning concepts.
