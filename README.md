@@ -27,7 +27,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/thumbail.png" width="600" />
+  <img src="assest/thumbail.png" width="600" />
 </p>
 
 </div>
