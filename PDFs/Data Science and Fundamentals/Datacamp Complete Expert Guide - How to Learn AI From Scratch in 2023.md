@@ -1,0 +1,1 @@
+This guide provides a comprehensive curriculum to learn AI from scratch, covering the fundamentals, tools, and techniques required to become an AI expert in 2023.
