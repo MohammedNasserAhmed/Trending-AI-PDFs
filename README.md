@@ -73,7 +73,7 @@ This project was created to address the challenge of navigating the vast landsca
 🔍 **Easy Navigation**: Clean table format for effortless browsing  
 
 <p align="center">
-  <img src="assest/pipeline.png" width="700" />
+  <img src="assest/pipeline-1.png" width="700" />
 </p>
 
 ---
@@ -250,6 +250,7 @@ Individual books and documents retain their original licenses. We recommend chec
   <em>Open the live catalog page</em>
   
 </p>
+
 ---
 
 ## ❓ FAQ
