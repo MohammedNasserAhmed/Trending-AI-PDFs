@@ -1,0 +1,1 @@
+This report applies statistical learning theory to deep learning, combining principles of machine learning and statistical inference to improve the understanding and development of deep neural networks.
