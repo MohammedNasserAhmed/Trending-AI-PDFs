@@ -1,0 +1,1 @@
+This cookbook provides an introduction to machine learning visualization using Seaborn, a popular Python library for creating informative and attractive statistical graphics and data visualizations.
