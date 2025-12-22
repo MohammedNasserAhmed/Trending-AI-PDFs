@@ -1,0 +1,1 @@
+This report provides an introduction to large language models, covers their definition, core objectives, and various types, serving as a foundational guide for understanding such models.
