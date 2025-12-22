@@ -1,0 +1,1 @@
+This book provides an introduction to artificial intelligence, covering its fundamental concepts and recent developments, including machine learning, deep learning, and natural language processing.
