@@ -1,0 +1,1 @@
+This book introduces readers to the fundamental concepts of Artificial Intelligence, tracing its history and delving into the workings of Neural Networks and their applications in various fields.
