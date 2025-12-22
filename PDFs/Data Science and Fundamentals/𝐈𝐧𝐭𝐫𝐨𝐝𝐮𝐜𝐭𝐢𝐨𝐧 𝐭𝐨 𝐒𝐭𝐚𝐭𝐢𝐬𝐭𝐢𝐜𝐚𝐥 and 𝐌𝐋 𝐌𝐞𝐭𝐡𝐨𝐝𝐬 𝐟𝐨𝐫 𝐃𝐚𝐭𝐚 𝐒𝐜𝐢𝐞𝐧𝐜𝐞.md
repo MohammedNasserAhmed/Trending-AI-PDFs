@@ -1,0 +1,1 @@
+This book provides an introduction to statistical and machine learning methods for data science, covering fundamental concepts and techniques for data analysis and interpretation.
