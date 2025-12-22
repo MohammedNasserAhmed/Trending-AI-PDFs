@@ -1,0 +1,1 @@
+This report compares the capabilities and features of Deep Seek with those of Open AI, discussing their implications for AI research and applications.
