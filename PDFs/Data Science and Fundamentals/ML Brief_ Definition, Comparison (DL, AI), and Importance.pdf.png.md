@@ -1,0 +1,1 @@
+This document provides a brief overview of machine learning, defining and comparing deep learning and artificial intelligence, highlighting their importance in modern applications.
