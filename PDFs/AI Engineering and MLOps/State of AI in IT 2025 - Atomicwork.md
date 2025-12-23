@@ -1,0 +1,1 @@
+This report provides an overview of the current state of Artificial Intelligence in the IT sector as of 2025, highlighting trends and advancements in the field.
