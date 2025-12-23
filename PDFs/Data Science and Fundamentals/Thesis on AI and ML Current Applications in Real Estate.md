@@ -1,0 +1,1 @@
+This thesis examines current applications of Artificial Intelligence and Machine Learning in the real estate sector, highlighting innovative solutions for property valuation, market analysis, and customer experience improvement.
