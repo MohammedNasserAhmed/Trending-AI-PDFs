@@ -1,0 +1,1 @@
+This cookbook provides an introduction to Machine Learning Operations (MLOps), covering the practices, tools, and methodologies for developing, deploying, and maintaining machine learning models in production environments effectively.
