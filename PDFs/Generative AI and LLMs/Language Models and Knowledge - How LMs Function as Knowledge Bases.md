@@ -1,0 +1,1 @@
+This book explores the intersection of language models and knowledge, highlighting how large language models function as knowledge bases, storing and retrieving information with remarkable efficiency.
