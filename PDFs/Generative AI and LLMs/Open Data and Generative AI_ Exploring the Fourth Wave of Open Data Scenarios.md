@@ -1,0 +1,1 @@
+This report explores the intersection of open data and generative AI, examining how emerging technologies will shape the fourth wave of open data scenarios and their societal implications.
