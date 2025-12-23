@@ -1,0 +1,1 @@
+This dictionary provides a comprehensive collection of Arabic-English terminology related to data and artificial intelligence, facilitating cross-lingual communication and knowledge sharing in the field.
