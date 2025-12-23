@@ -1,0 +1,1 @@
+This lecture notes cover fundamental concepts and techniques in machine learning, including supervised and unsupervised learning, model evaluation, and optimization methods for predictive modeling.
