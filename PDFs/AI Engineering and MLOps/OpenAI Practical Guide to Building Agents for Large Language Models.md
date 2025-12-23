@@ -1,0 +1,1 @@
+This book provides a practical guide to building intelligent agents for large language models, covering topics from model architecture to deployment and interaction strategies.
