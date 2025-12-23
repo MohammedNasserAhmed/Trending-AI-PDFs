@@ -1,0 +1,1 @@
+This book provides a comprehensive introduction to deep learning, covering its fundamentals, key concepts, and applications, aiming to help readers grasp the principles and techniques of this complex field.
