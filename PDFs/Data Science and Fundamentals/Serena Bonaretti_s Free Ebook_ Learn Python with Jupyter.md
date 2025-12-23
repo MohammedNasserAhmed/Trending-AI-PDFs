@@ -1,0 +1,1 @@
+This book provides an introduction to Python programming using the Jupyter platform, offering hands-on learning experiences and interactive coding environments for beginners to learn and practice programming skills.
