@@ -1,0 +1,1 @@
+This book covers hands-on projects in Python machine learning using popular libraries like Scikit-learn, TensorFlow, and Deep Reinforcement Learning for real-world applications and problems.
