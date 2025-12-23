@@ -1,0 +1,1 @@
+This book provides an introduction to machine learning concepts and techniques for beginners, featuring IBM's expertise in a comprehensive and easy-to-follow format.
