@@ -1,0 +1,1 @@
+This guide provides an introduction to data preprocessing and machine learning pipeline using Scikit-Learn, a popular Python library for data science and artificial intelligence applications.
