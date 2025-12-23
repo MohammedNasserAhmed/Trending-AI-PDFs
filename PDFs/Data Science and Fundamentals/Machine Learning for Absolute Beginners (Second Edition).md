@@ -1,0 +1,1 @@
+This book offers a comprehensive introduction to machine learning fundamentals, covering the basics of data science, algorithms, and model implementation for absolute beginners.
