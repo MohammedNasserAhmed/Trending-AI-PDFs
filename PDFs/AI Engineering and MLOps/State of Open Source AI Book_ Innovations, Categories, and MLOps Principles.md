@@ -1,0 +1,1 @@
+This book explores the state of open-source AI, covering innovations, categories, and MLOps principles, providing insights into the rapidly evolving field of artificial intelligence and machine learning.
