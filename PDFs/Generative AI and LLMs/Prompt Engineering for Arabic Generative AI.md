@@ -1,0 +1,1 @@
+This book focuses on the development and applications of Prompt Engineering for Arabic Generative AI, exploring techniques to improve language model performance and relevance.
