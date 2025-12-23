@@ -1,0 +1,1 @@
+This report introduces Machine Learning (ML) and its importance, comparing key concepts such as Deep Learning and Artificial Intelligence and their definitions.
