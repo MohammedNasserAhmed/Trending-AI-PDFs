@@ -1,0 +1,1 @@
+This book provides machine learning use cases and technical blogs on time series and fraud detection, offering practical solutions and insights for real-world applications.
