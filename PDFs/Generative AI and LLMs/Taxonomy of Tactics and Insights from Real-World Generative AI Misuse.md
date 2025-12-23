@@ -1,0 +1,1 @@
+This report presents a taxonomy of tactics used in generative AI misuse, offering insights and analysis from real-world cases, and providing a framework for understanding and mitigating AI-related security threats.
